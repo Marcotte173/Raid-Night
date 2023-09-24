@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6425314152293234413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6462565206295211015}
+  - component: {fileID: -2213757879344721801}
+  m_Layer: 0
+  m_Name: NaturesAlly
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6462565206295211015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425314152293234413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 988.6362, y: 622.0152, z: -25.230495}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2213757879344721801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425314152293234413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bebeb71cc5d6fb4d89b787fa82aa42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  target: {fileID: 0}
+  abilityName: Natures Ally
+  verb: Natures Ally
+  flavor: []
+  rangeRequired: 99
+  energyRequired: 30
+  cooldownTime: 20
+  cooldownTimer: 0
+  damage: 0
+  threat: 100
+  castTime: 2
+  rangeToTarget: 0
+  cast: 0
+  passive: 0
+  mobile: 0
+  noTarget: 1
+  summonTiles: []
+  howManyWolves: 2
+  wolfHp: 100
+  wolfDamage: 35
+  wolfDefence: 20
+  wolfCrit: 5
+  duration: 12
+  moveSpeed: 1
+  wolfAttackSpeed: 1.1

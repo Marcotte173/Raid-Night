@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7328696856920017393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7348872336173096825}
+  - component: {fileID: 2868650781625986266}
+  m_Layer: 0
+  m_Name: Crescendo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7348872336173096825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328696856920017393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 978.0118, y: 629.08093, z: -17.704697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2868650781625986266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328696856920017393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99368e7c344f87641ae0f0e9b6ee69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  target: {fileID: 0}
+  abilityName: Crescendo
+  verb: Crescendo
+  flavor: []
+  rangeRequired: 6
+  energyRequired: 40
+  cooldownTime: 15
+  cooldownTimer: 0
+  damage: 10
+  threat: 0
+  castTime: 2
+  rangeToTarget: 0
+  cast: 0
+  dash: 0
+  passive: 0
+  mobile: 0
+  noTarget: 0
+  primaryThreshHold: 0
+  partyThreshHold: 0
+  hotTime: 15
+  threshHold:
+  - 14
+  - 12.5
+  - 11
+  - 9.5
+  - 8
+  - 6.5
+  - 5
+  - 3.5
+  - 2
+  - 0.5
+  - 0
+  aDBonus: 10
+  damBonus: 75
+  damBonusTime: 4

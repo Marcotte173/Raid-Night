@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda9744d67e5ee54a85df9ae708fe165, type: 3}
+  m_Name: Test Orc
+  m_EditorClassIdentifier: Assembly-CSharp::EncounterSO/ItemSO
+  id: 1
+  bossSummon:
+  - {fileID: 4300494888627002933, guid: 266f488ffb4fc6046bc85a203d3fc9da, type: 3}
+  arena: 1
+  arenaSizeX: 20
+  arenaSizeY: 20
+  cameraY: 9.4
+  dropAmount: 3
+  drops:
+  - {fileID: 11400000, guid: ae950a322bfa4df488184b35560163c5, type: 2}
+  - {fileID: 11400000, guid: 04b396cbcd8119140974f56ee01d0312, type: 2}
+  - {fileID: 11400000, guid: 04b396cbcd8119140974f56ee01d0312, type: 2}
+  - {fileID: 11400000, guid: ae950a322bfa4df488184b35560163c5, type: 2}
+  - {fileID: 11400000, guid: 04b396cbcd8119140974f56ee01d0312, type: 2}
+  flavor: Test Orc
+  maximumYPlace: 10
+  bossLocation:
+  - {x: 10, y: 14}
+  pullTime: 20
+  bossFightTime: 25

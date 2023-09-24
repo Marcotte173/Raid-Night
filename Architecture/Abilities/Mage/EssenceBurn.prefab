@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7599099901540367498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6084175983050018747}
+  - component: {fileID: -2194270237197102360}
+  m_Layer: 0
+  m_Name: EssenceBurn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6084175983050018747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599099901540367498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6158736, y: 0.74620485, z: 0.0034843222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2194270237197102360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599099901540367498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e477d7a0080c149a934bd87a22b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  target: {fileID: 0}
+  abilityName: Essence Burn
+  verb: Essence Burn
+  flavor: []
+  rangeRequired: 99
+  energyRequired: 30
+  cooldownTime: 50
+  cooldownTimer: 0
+  damage: 100
+  threat: 0
+  castTime: 0.3
+  rangeToTarget: 0
+  cast: 0
+  dash: 0
+  passive: 0
+  mobile: 0
+  noTarget: 1
+  pic: {fileID: -855029568, guid: 9480c63a3ef2c1443a31bbffb067ae1a, type: 3}
+  timer: 8
+  spelllCostMod: 50
+  recoveryLength: 6
+  manaRecoveryMod: 50

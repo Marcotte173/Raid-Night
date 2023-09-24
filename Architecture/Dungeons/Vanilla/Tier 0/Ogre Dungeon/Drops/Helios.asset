@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafe1a29e79592e40afaf45d684dc97d, type: 3}
+  m_Name: Helios
+  m_EditorClassIdentifier: 
+  id: 46
+  itemName: Helios
+  pic: {fileID: 1149085195, guid: 8f77bef515845f94fa1d85356ee95259, type: 3}
+  rarity: 1
+  type: 4
+  armorType: 0
+  weaponType: 2
+  offHandType: 0
+  hands: 0
+  role: 4
+  itemTypeString: Sword
+  health: 20
+  defence: 0
+  crit: 0
+  attackPower: 0
+  spellpower: 35
+  mana: 65
+  damage: 30
+  attackSpeed: 1
+  range: 1.6
+  score: 6
+  value: 100
+  vamp: 0
+  haste: 0
+  thorns: 0
+  movement: 0
+  physicalDamageMod: 0
+  magicDamageMod: 0
+  manaRegenMod: 0
+  damageTakenMod: 0
+  energyCostMod: 0
+  healingMod: 0
+  flavor:
+  - 
+  - 
+  - This is the Flavor for the Item

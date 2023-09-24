@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafe1a29e79592e40afaf45d684dc97d, type: 3}
+  m_Name: Hambo Sword(Tank)
+  m_EditorClassIdentifier: 
+  id: 38
+  itemName: Hambo Sword
+  pic: {fileID: -463760701, guid: 8f77bef515845f94fa1d85356ee95259, type: 3}
+  rarity: 0
+  type: 4
+  armorType: 0
+  weaponType: 2
+  offHandType: 0
+  hands: 0
+  role: 0
+  itemTypeString: Sword
+  health: 15
+  defence: 5
+  crit: 0
+  attackPower: 0
+  spellpower: 0
+  mana: 0
+  damage: 15
+  attackSpeed: 1.3
+  range: 1.6
+  score: 3
+  value: 75
+  vamp: 0
+  haste: 0
+  thorns: 0
+  movement: 0
+  physicalDamageMod: 0
+  magicDamageMod: 0
+  manaRegenMod: 0
+  damageTakenMod: 0
+  energyCostMod: 0
+  healingMod: 0
+  flavor:
+  - 
+  - 
+  - This is the Flavor for the Item

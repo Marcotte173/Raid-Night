@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4768623097690610890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5907043521440189441}
+  - component: {fileID: 8228408942910870502}
+  - component: {fileID: 7457044120249627379}
+  m_Layer: 0
+  m_Name: BlacksandCouncil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5907043521440189441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768623097690610890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 936.0662, y: 547.34686, z: -149.76094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8228408942910870502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768623097690610890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb738be11004f9c4e8775dc8dc8595ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dungeonName: Blacksand Council
+  dungeonPic: {fileID: 21300000, guid: d4865b873432cfd4dbb90d6845f4babf, type: 3}
+  id: 3
+  dungeonCompleted: 0
+  maxPlayers: 5
+  agentsInDungeon: []
+  recommendedGearScore: 28
+  description:
+  - The Blacksand Assassins have plagued Lexisiva for generations as hired killers
+    and political weapons.
+  - 
+  - Of late, they have entered the political game themselves, orchestrating the Night
+    of the Broken Crown.
+  - By the end of the night, The king and half the Nobility were dead.
+  - The Queen survived and currently commands the loyalty of the surviving Nobles,
+    as well as the City's military.
+  - "There are whispers that the Blacksand council is meeting soon to plan the Queen\u2019s
+    demise. "
+  - 'All 4 members of the council in one place is too good an opportunity to pass
+    up. '
+  encounter:
+  - {fileID: -5909260343461824014, guid: b8755d89b4be95a4f84b85a46ba70305, type: 3}
+  encountersCompleted: 0
+  currentEncounter: {fileID: 0}
+  expansion: 0
+  tier: 1
+--- !u!114 &7457044120249627379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768623097690610890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d119d3f5c7c6ba44b9b50ca63949d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEncounter: {fileID: 0}

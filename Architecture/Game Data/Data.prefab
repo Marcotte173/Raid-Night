@@ -1,0 +1,559 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8454802126791340536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8454802126791340542}
+  - component: {fileID: 8454802126791340543}
+  - component: {fileID: 8397720955197354746}
+  - component: {fileID: 5781553594512709155}
+  - component: {fileID: 1772265221652726990}
+  - component: {fileID: 8776538526869612382}
+  - component: {fileID: 1809110051831980632}
+  - component: {fileID: 5972787011016342065}
+  - component: {fileID: 7920262393148086569}
+  - component: {fileID: 7715135372028711357}
+  - component: {fileID: 6942688606404296749}
+  m_Layer: 0
+  m_Name: Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8454802126791340542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1547.168, y: 563.97253, z: -10.305588}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8454802126791340543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5809921cfbfe5c541ac64c3d18aaae29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: data.game
+  useEncryption: 1
+--- !u!114 &8397720955197354746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5e930848a649047b8dfe75e0570bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterIdCounter: 0
+  bossIdCounter: 0
+--- !u!114 &5781553594512709155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2ee10eb67404d49b5e7981b65a278d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile: {fileID: 2817995534157339400, guid: 379768b113c604540adcad5a108ff37f, type: 3}
+  agent: {fileID: 5265215496036315845, guid: 37b6f6895fd16354d807e1181698967a, type: 3}
+  encounter: {fileID: -7461618008742545995, guid: c8d99449dff7f7e4980594ad5417659a, type: 3}
+  aggro: {fileID: -5224095361777593902, guid: cd98615513af80048b0750f1023f8253, type: 3}
+  wolf: {fileID: -764700151128008312, guid: 18523c62a26d0b7408e4ac870b75b30e, type: 3}
+  player: {fileID: -6223437054883095067, guid: 64861db19c82b6841ad2aab5fda87af4, type: 3}
+  simpleProjectile: {fileID: -2497429717079710896, guid: 05e2d378e09f3e64f99f915b72e3b25b, type: 3}
+  playerProjectile: {fileID: 558520247892411076, guid: 2801bd4b0abb16145a7c2353973eaa32, type: 3}
+  enemyProjectile: {fileID: 4641634879798993953, guid: 2966420cff972284989d439df21ab98d, type: 3}
+  orcHazard: {fileID: 6887439970788274368, guid: 2e0056f5bacdde24d948c79648156109, type: 3}
+  clawsFromTheDeep: {fileID: 4736450225047632224, guid: 395fe6687f5758146b34178fb67a28f3, type: 3}
+  shieldWallInspire: {fileID: -4053810199129183148, guid: a070a11c292bf534ab8bb03b56f9a81f, type: 3}
+  animator: {fileID: 2110666959712955281, guid: 6522625f43891ab499361bf44e44befa, type: 3}
+  essenceBurn: {fileID: 5835466418685522362, guid: f21eaa046a4e5be4fb365604f2aad1ed, type: 3}
+  essenceRecovery: {fileID: 5705441520113706833, guid: ea827a917187439429b94c9990f41ec4, type: 3}
+  rot: {fileID: -3707012315586034381, guid: c561c924574dde44b830037a4bbbca39, type: 3}
+  snakeBite: {fileID: 4506218164958650017, guid: 0408de16e3fb603409324a873515bfd8, type: 3}
+  savageBlowDot: {fileID: 6122256187621705854, guid: 41c381c0bd23fb84981f82bb3837b280, type: 3}
+  taunt: {fileID: -3736888284464068669, guid: ed49a6f41aef00b4bb7c4e478f696ed5, type: 3}
+  arcaneTendrils: {fileID: 1651082008219491808, guid: 3e2745e07e0368541a82a94bfa070d57, type: 3}
+  tooAngryToDie: {fileID: 3044446765809443171, guid: 2ebd8a7854854144caa619bfcf020e23, type: 3}
+  warcry: {fileID: 2702409027688287278, guid: bed703c5298b5d94688fa537b26b3bd8, type: 3}
+  inspiringTune: {fileID: -4307535794368784342, guid: bedd5350ce10cb2459a2d3af8e2974fe, type: 3}
+  inTune: {fileID: -4639217163408925375, guid: 16ac4760aeb77974aa020de361cf63ad, type: 3}
+  timeDecayBuff: {fileID: -6005184386461918960, guid: 96aa41e23c4a3a74cba5f040b2d0f26f, type: 3}
+  timeDecayDebuff: {fileID: 1190767136739640328, guid: 82b2b3511aa547248a3bf01906c0223e, type: 3}
+  crescendo1: {fileID: -3962788948753837919, guid: 598e190505899204a845fce239509718, type: 3}
+  crescendo2: {fileID: -957767692890858910, guid: d0c5ea7e791390d46910526fc40cc054, type: 3}
+  lastStand: {fileID: -8062746401569807396, guid: be57df8bfac0524479f470c6b5bb0505, type: 3}
+  shield: {fileID: 7561858668806239708, guid: 474c0ad090b69d34289a2ddcb12905a7, type: 3}
+  shieldSpike: {fileID: 4233828785154680034, guid: a9d7928834260854d9673bf7eb4023a7, type: 3}
+  redoubt: {fileID: 8715164560711887997, guid: ef80a1dd0e4e64843a98e20046bc606c, type: 3}
+  recklessSwingDefenceNerf: {fileID: -5540980721444772927, guid: 7f026179f74f06846a3ebe2344cad21b, type: 3}
+  greaterHealHot: {fileID: 7568304357752969170, guid: 760b44c8b5506e34bbdf2699f4c15e5d, type: 3}
+  hibernate: {fileID: 1332396732569172614, guid: 401ab026d7f9cd0459ec5924c973cf8c, type: 3}
+  soothingMelodyHot: {fileID: 6503774228433254788, guid: 8a8de9149de32e645b78db363d0e2f97, type: 3}
+  upliftHot: {fileID: 3211389305287399313, guid: 6c8bf3318c46c1540ac57b188d8d818f, type: 3}
+  dirgeOfDemiseBuff: {fileID: 8054761304712800139, guid: f62f294f16026c642b6f0561c58e61a3, type: 3}
+  finaleBuff: {fileID: 7389225143398304145, guid: 0271282f17a135e42bf2312c71fec0f3, type: 3}
+  dualWield: {fileID: 9109055700604600750, guid: b6e856c4dc84a0b468f54b60e0198516, type: 3}
+  finaleInspire: {fileID: 2550690952960516521, guid: 1d8fa28a84da2244296099abbd4f243b, type: 3}
+  damageNumbers: {fileID: 140200567389806042, guid: 3d75708b6b229ec4b8a877960eaea3db, type: 3}
+  setup: {fileID: 5823975361218191907, guid: 7891e3dc6d006284dbab8364192d88dd, type: 3}
+  raggedWound: {fileID: -2379046019758031523, guid: db3a280ce18cf164796a4544429f4db3, type: 3}
+  caltrops: {fileID: -3373402955390510508, guid: 1ab73de972f00994795fd76163f72de4, type: 3}
+  caltropHazard: {fileID: 5068195668816188769, guid: 177ee806c8fd9d04cb9fc36dc9b44cdd, type: 3}
+  hemorage: {fileID: -5263384832310261847, guid: 242717226f452d64fb3df5577139f391, type: 3}
+  bloodyMess: {fileID: 2581373920260691363, guid: b473a37b9a403454e9db5c4de5830a23, type: 3}
+  outlineAnimator: {fileID: 2110666959712955281, guid: b9d8ab338c8bd6a4baaae27b7eeda4e6, type: 3}
+  disintigrate: {fileID: 9100000, guid: 9894c6ca3c9068945b5aef07c2f159d0, type: 2}
+  explosion: {fileID: 9100000, guid: 6d164a1345a95c749bac0cc4ec3aab77, type: 2}
+  fireball: {fileID: 9100000, guid: ced0c43a5cc22af4e8bd44eb21dfff33, type: 2}
+  caltrop: {fileID: 9100000, guid: d475b2416db49224ca8f42f9a9c5cdbe, type: 2}
+  preEncounter:
+  - {fileID: 8525792617338250306, guid: 930128fb33a1ee3499fd05b7eee75450, type: 3}
+  furyOfBlades: {fileID: -5384950846304883363, guid: 32c2ec96bcf12f8448ba3db5d921e623, type: 3}
+  flag: {fileID: 6236488449629957064, guid: ebea5a1c9a2bb184bbaf2405b94bfce4, type: 3}
+  aggroBelief: {fileID: -1387527434309902876, guid: 85ea7ed1991f4524cb8eae64faed1757, type: 3}
+  traits:
+  - {fileID: -8847328633775457453, guid: b9e8068afa3bc3549ac9e94b6f0cd34d, type: 3}
+  - {fileID: -6280899112450078103, guid: 42aa8d83d0be074428f1e99f6c1102df, type: 3}
+  - {fileID: -3348754284687719531, guid: 4164888f291ff3147ac763269715f5e3, type: 3}
+  - {fileID: -3348754284687719531, guid: fe1ebd25d2f49cd4aa9c41a4cf846293, type: 3}
+  raidRoster: {fileID: -1243022014334862336, guid: 16caf02ccd2d0804abc5ccea8012c05c, type: 3}
+  entry: {fileID: 4195247133188158093, guid: 8b1b116dadc84bf4f9b0bb3c413eae8e, type: 3}
+--- !u!114 &1772265221652726990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcf727598322f94d996e40d72f2d968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mage:
+    serializedVersion: 2
+    rgba: 4294962432
+  druid:
+    serializedVersion: 2
+    rgba: 4281532259
+  beserker:
+    serializedVersion: 2
+    rgba: 4278205781
+  shieldBearer:
+    serializedVersion: 2
+    rgba: 4289032689
+  rogue:
+    serializedVersion: 2
+    rgba: 4278512639
+  bard:
+    serializedVersion: 2
+    rgba: 4286273559
+  uncommon:
+    serializedVersion: 2
+    rgba: 4281506851
+  rare:
+    serializedVersion: 2
+    rgba: 4294783793
+  epic:
+    serializedVersion: 2
+    rgba: 4287370595
+  legendary:
+    serializedVersion: 2
+    rgba: 4283204351
+  playerName:
+    serializedVersion: 2
+    rgba: 4284930798
+  health:
+    serializedVersion: 2
+    rgba: 4285595568
+  mana:
+    serializedVersion: 2
+    rgba: 4292254491
+  rage:
+    serializedVersion: 2
+    rgba: 4281937354
+  energy:
+    serializedVersion: 2
+    rgba: 4278512639
+  today:
+    serializedVersion: 2
+    rgba: 4294462179
+  ahead:
+    serializedVersion: 2
+    rgba: 4294462179
+  behind:
+    serializedVersion: 2
+    rgba: 4294462179
+  damageColor:
+    serializedVersion: 2
+    rgba: 4289704375
+  magicColor:
+    serializedVersion: 2
+    rgba: 4292685183
+  critColor:
+    serializedVersion: 2
+    rgba: 4280255477
+  healColor:
+    serializedVersion: 2
+    rgba: 4281646136
+  bad:
+    serializedVersion: 2
+    rgba: 4278195711
+  green:
+    serializedVersion: 2
+    rgba: 4294462179
+  red:
+    serializedVersion: 2
+    rgba: 4294462179
+  darkGreen:
+    serializedVersion: 2
+    rgba: 4294462179
+  grey:
+    serializedVersion: 2
+    rgba: 4284638050
+  pveBackGround:
+  - {fileID: 21300000, guid: 0af409fa20793a64ba42603ec75edb7d, type: 3}
+  greyArena:
+  - {fileID: -745645855993587873, guid: c3b1a8f98c060ec4d9b2ffb40b1e9398, type: 3}
+  - {fileID: 9173839873224666002, guid: c3b1a8f98c060ec4d9b2ffb40b1e9398, type: 3}
+  - {fileID: -6888756438569675735, guid: c3b1a8f98c060ec4d9b2ffb40b1e9398, type: 3}
+  grass:
+  - {fileID: -1247501539174927167, guid: 9da08fdf09c8b774798de56174fb6016, type: 3}
+  - {fileID: -4124101759643554855, guid: 9da08fdf09c8b774798de56174fb6016, type: 3}
+  - {fileID: -7534391375593514864, guid: 9da08fdf09c8b774798de56174fb6016, type: 3}
+  arcaneMissile: {fileID: 21300000, guid: 2384a11e94a469e45b428886c4c4be6e, type: 3}
+  fireblast: {fileID: 379321170, guid: be0b95afe484f1a49a01a8223d36e688, type: 3}
+  arcaneAoeMissile: {fileID: 21300000, guid: c7a4ad4f101cf2842acf57e86ca1f75e, type: 3}
+  menuBackGround: {fileID: 21300000, guid: 81601cbdbe5b6d24d89a203a12f6f93f, type: 3}
+  none: {fileID: 21300000, guid: 0ccbf610b78588347baa9211fe8c3915, type: 3}
+  rewardBackGround: {fileID: 0}
+  placeTile: {fileID: 21300000, guid: 3ed8f8719c15d3d438297ba9bc8acabf, type: 3}
+  dead: {fileID: 21300000, guid: 9d3fdf4c817be764ab0d2e242053cc1f, type: 3}
+  flagGroundColor:
+  - {fileID: -689265625, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: -1325600358, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: 257869091, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: 685704597, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: 180953568, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: 400627373, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: 1997116495, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: -222897453, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  flagColor:
+  - {fileID: -1209976181, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: -1091887438, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: 1109260168, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  - {fileID: -2101454173, guid: a9464ca5926e42942b17e7c4bb543836, type: 3}
+  outline:
+  - {fileID: -1206375020, guid: 7c005d053d74601418fd8a129fbcff70, type: 3}
+  - {fileID: -1214871617, guid: 7c005d053d74601418fd8a129fbcff70, type: 3}
+  - {fileID: -800724523, guid: 7c005d053d74601418fd8a129fbcff70, type: 3}
+  - {fileID: -928008540, guid: 7c005d053d74601418fd8a129fbcff70, type: 3}
+  itemBox:
+  - {fileID: -1606434656, guid: 526e39a96229de544adc826fbc03b376, type: 3}
+  - {fileID: -1952519299, guid: 526e39a96229de544adc826fbc03b376, type: 3}
+  - {fileID: -400334964, guid: 526e39a96229de544adc826fbc03b376, type: 3}
+  - {fileID: -1464366766, guid: 526e39a96229de544adc826fbc03b376, type: 3}
+  characters:
+  - {fileID: 21300000, guid: 99905625eaa1ee24d989ce59a49c60eb, type: 3}
+  arcanosPillar: {fileID: 21300000, guid: 95619241f77cad5448549c1471f03df6, type: 3}
+--- !u!114 &8776538526869612382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20cbe545dd0f8249a088c0567d11b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freeAgents: []
+--- !u!114 &1809110051831980632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16822a870bbe0042b0bf88be0753191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicAttack: {fileID: 5832216474726337951, guid: 515536fd04c797149ad1195525c0f7f0, type: 3}
+  beserkerStalwart:
+  - {fileID: -1754750476917797746, guid: 42be8c11455005144981b407e3054170, type: 3}
+  - {fileID: -6303866484294295665, guid: 0981b8f3c9a70834eb299414104897bf, type: 3}
+  - {fileID: 872716979885718514, guid: e7daa4fee897a6e4daf4c48e51441dd5, type: 3}
+  - {fileID: 1908761243647433321, guid: fafa05be5c061c441981404eacc5770e, type: 3}
+  beserkerFocused:
+  - {fileID: 3869725079767818255, guid: 11275b7890ab4544784366de77e82a1d, type: 3}
+  - {fileID: -6303866484294295665, guid: 0981b8f3c9a70834eb299414104897bf, type: 3}
+  - {fileID: 8896102238000686046, guid: c77f5bde05ae71a4eb006af19958bfd6, type: 3}
+  - {fileID: -2040396735833396339, guid: 88c96a7ab251b4740b68a8bccb42ada0, type: 3}
+  druidRedemptive:
+  - {fileID: 8785762386680747582, guid: 0c279341a0b1ed247b5b53b718e7c961, type: 3}
+  - {fileID: -3415263711970804311, guid: d0d5eebe6fbc0e34aa398cb903e16938, type: 3}
+  - {fileID: 4911176446125257630, guid: 7211ae5994cb0e143b7c4dca4400b6e8, type: 3}
+  - {fileID: -1655322510965761957, guid: fff57f913b0d22943bd6778ce6f99008, type: 3}
+  druidWrath:
+  - {fileID: 4729055888163271905, guid: e34e1f70640099846878a2dbcdf315bc, type: 3}
+  - {fileID: 6113506271342730461, guid: f0ab2ca0e06dcdc4c89e2dd2d7bb62cf, type: 3}
+  - {fileID: -2213757879344721801, guid: d4d6e8a809fd40f449d4abcd1d32f86c, type: 3}
+  - {fileID: 2022176960238947337, guid: 32906edf35bbc2b408ecb021b7090691, type: 3}
+  bardTranquil:
+  - {fileID: -4672175901689143598, guid: 322edce5c18a9c6439c90a823b1fc078, type: 3}
+  - {fileID: -5138180668947413036, guid: 1f6abd5ffad1e804bb8b5917bfb0b038, type: 3}
+  - {fileID: -8907287637124489822, guid: a5b37e364dca88d4a808c6e8c16b973b, type: 3}
+  - {fileID: -5005338539852671838, guid: ae9c6867056ba0447bf20f91cfa463cc, type: 3}
+  bardInspiring:
+  - {fileID: 8442190797553935791, guid: 28284965f0f7ae744a637d31bfb23d11, type: 3}
+  - {fileID: -9129199720645557868, guid: efc1607c980a4d2418f13adad6c198bb, type: 3}
+  - {fileID: 2868650781625986266, guid: 9c12cf0a1f9694e4086cfcb89af102c9, type: 3}
+  - {fileID: 2983511683516034255, guid: c7a086cf6b6c4944fa4f219c6543783b, type: 3}
+  shieldStalwart:
+  - {fileID: -1754750476917797746, guid: 19909f7cbd1aa1c4487f6a824d13a5c6, type: 3}
+  - {fileID: -8419029668438010758, guid: dd9c14d72effe5746a08e9163c7be8e5, type: 3}
+  - {fileID: 1510321768680836919, guid: c512a77d877d6134b953e488472b32df, type: 3}
+  - {fileID: -1978042633923200671, guid: 99266dd109161e24b9f09187fa2a511b, type: 3}
+  shieldInspiring:
+  - {fileID: -4191386251408937302, guid: e4047265e43e0c24793ec53ea75d286a, type: 3}
+  - {fileID: 7851409589346089223, guid: 429eb20b9e905b2478970a18c25bd136, type: 3}
+  - {fileID: 1880422883647592283, guid: df3759aa3e958d04cade48839c60468d, type: 3}
+  - {fileID: 4698867607339453880, guid: 19dc5e4ba0b401943a7471531b6b97d6, type: 3}
+  rogueFocused:
+  - {fileID: -5658261374941618867, guid: 5eb85c288f5843e478106a13cdcc9447, type: 3}
+  - {fileID: 7529674387295714189, guid: 0dbfdc4afdf1135489cdd42f161b8e21, type: 3}
+  - {fileID: 5547898612060011158, guid: 0fda5273179b2fc45817b8bf0338f474, type: 3}
+  - {fileID: -7164044803241541621, guid: b8319e327013a09498b20731afd80190, type: 3}
+  rogueWrathful:
+  - {fileID: 4868532144908690347, guid: 35afd9ebe5ac60640beb32f7527958ad, type: 3}
+  - {fileID: -2469629498224148078, guid: 68659b31117cd484cac3edbf427a02ec, type: 3}
+  - {fileID: 6474079917774581622, guid: 794f7c4db3897f446a8e108a954a67c9, type: 3}
+  - {fileID: -7482494620212974611, guid: bbe406cffdc8a3047a75e7d593944c41, type: 3}
+  - {fileID: 7529674387295714189, guid: 0dbfdc4afdf1135489cdd42f161b8e21, type: 3}
+  mageExplosive:
+  - {fileID: 7104436713535737413, guid: 47c708c5a08403e47aba23dd2f5bb4be, type: 3}
+  - {fileID: 3347206712117431731, guid: 4ab07ef6e254554478af2afc7d0841dc, type: 3}
+  - {fileID: -5940966662031299572, guid: 36c55dc5c2a64ea48a94995ed7a91080, type: 3}
+  - {fileID: -3373569466190238951, guid: 1d586f2b7dacb3a40a09fa0b80de76de, type: 3}
+  mageFocused:
+  - {fileID: 2454328786427356445, guid: 3a8dc49f13054a94e8263ca98db9b2ee, type: 3}
+  - {fileID: -3641444014990999184, guid: 9d6b199b9225c344bb402ea5664ce988, type: 3}
+  - {fileID: -2194270237197102360, guid: 33917603f17d0bc4382a16c5d40eef93, type: 3}
+  - {fileID: 8884982572064976201, guid: 775169b24f2fc6941a191d5520df6da9, type: 3}
+  boss: []
+  schar:
+  - {fileID: 1626312964777148864, guid: a17d7fe1cdcd27d438499325f76c7c07, type: 3}
+  arcanos:
+  - {fileID: 729704455714062196, guid: e5dcd34a5b05b9d4aace60b786c41474, type: 3}
+  boros:
+  - {fileID: -7189893580858109045, guid: eaf45d0404f87bc479a2c54e2a77a73b, type: 3}
+  paladinOfCeres:
+  - {fileID: -7785690199697923939, guid: 0f682f31d44d6a64d9f393a48d7d04bf, type: 3}
+  paladinOfAkalos:
+  - {fileID: 7139173825185808688, guid: 66a4cfc82bfd68d4b85328cbb41b53be, type: 3}
+  - {fileID: 3435679001287944231, guid: 2b25eb3fa79508244b5d5fc7fa3c62d1, type: 3}
+  paladinOfMaritae:
+  - {fileID: -2543987816188278493, guid: b062b0098ac4b5442b75b6047a07cdca, type: 3}
+  paladinOfDurona:
+  - {fileID: 1758495485342835181, guid: ee3702ff67c00a84fb1e28c3bb6941f1, type: 3}
+  - {fileID: 9083920646243089858, guid: 39cf31d6f969fe844911d4533ce2b9ac, type: 3}
+--- !u!114 &5972787011016342065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3136524e0cb354090ba380f8a70a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHead:
+  - {fileID: 11400000, guid: ed98883edc652dd46ab16fc45b11cb85, type: 2}
+  - {fileID: 11400000, guid: 5f0b98ce457791e4cad4af967069a262, type: 2}
+  - {fileID: 11400000, guid: e06b9e997f2be54449fe79e609c2bdba, type: 2}
+  - {fileID: 11400000, guid: 7a8b43419e9d41549a5cc0538419cb97, type: 2}
+  - {fileID: 11400000, guid: bf72916eae7a7db4f94c0de75077dd17, type: 2}
+  - {fileID: 11400000, guid: f3cd2c2b781ada543a3a49040bf77834, type: 2}
+  startingChest:
+  - {fileID: 11400000, guid: 3324adab8b82de446bbd7a5fb504f807, type: 2}
+  - {fileID: 11400000, guid: b351adb99e13e134bb201a7e7c59097e, type: 2}
+  - {fileID: 11400000, guid: 8ce8c822b5ddc6d45ba131f201ad8e85, type: 2}
+  - {fileID: 11400000, guid: f5e5dd9e31526cd4aaf87efdba4634a8, type: 2}
+  - {fileID: 11400000, guid: 631486d7a6a419640b259ad671061331, type: 2}
+  - {fileID: 11400000, guid: ce692165631e3dc4f818af1a399c6ed8, type: 2}
+  startingLegs:
+  - {fileID: 11400000, guid: d9e522a2afa16c2488c6aa646181f3e2, type: 2}
+  - {fileID: 11400000, guid: 488e7ce12f9ee8d4f944f19161d875e5, type: 2}
+  - {fileID: 11400000, guid: b571b6075bc833f42a8eea41196579e2, type: 2}
+  - {fileID: 11400000, guid: 8eb0f63fa83babb41baaa31af639711e, type: 2}
+  - {fileID: 11400000, guid: 5c66e4307e96e634199883ce496b2f6a, type: 2}
+  - {fileID: 11400000, guid: 7179de1f8a988d349aed3aa455bedb79, type: 2}
+  startingFeet:
+  - {fileID: 11400000, guid: 08c6fb411582f0e469710350120ce288, type: 2}
+  - {fileID: 11400000, guid: 131af9ae74da4cd4592cac941693e941, type: 2}
+  - {fileID: 11400000, guid: 50a977725901be0439faa8ee4bc08ac5, type: 2}
+  - {fileID: 11400000, guid: 4561db4c3a41dfc45a4e35daa4c775b6, type: 2}
+  - {fileID: 11400000, guid: 1d2d2ebf7a9a0f44faecfab5a45db08c, type: 2}
+  - {fileID: 11400000, guid: 63e9ed04fd074784cb5b616fad6ae33a, type: 2}
+  startingTrinket:
+  - {fileID: 11400000, guid: 6e9a1f52acf363e48b52ce76f5a36189, type: 2}
+  - {fileID: 11400000, guid: f21cee593d1ea6340a023be2a6cadad5, type: 2}
+  - {fileID: 11400000, guid: 75ef8288b00c780488110a895d7433f1, type: 2}
+  - {fileID: 11400000, guid: 354371de08611af40a31dba0e1255915, type: 2}
+  - {fileID: 11400000, guid: 28087acdf4ab9a14581327f44dcad013, type: 2}
+  startingWeapon:
+  - {fileID: 11400000, guid: 373e04aeb7d11434687d6ca0ccc82cc1, type: 2}
+  - {fileID: 11400000, guid: 85399345378078249a13017e3e175730, type: 2}
+  - {fileID: 11400000, guid: 8645c54c51194ed4aae5c9a57c84a2c6, type: 2}
+  - {fileID: 11400000, guid: 4a207916919496f42baf3496345c2c44, type: 2}
+  - {fileID: 11400000, guid: f145edd9dba287847955a7cee8720cc6, type: 2}
+  - {fileID: 11400000, guid: 4222d120668c0cb4f9d733cb690b43a3, type: 2}
+  - {fileID: 11400000, guid: 3e7ef99a1f33b5b49a7b0e869412dfa6, type: 2}
+  - {fileID: 11400000, guid: 25943ef208d60b245bd837ffcd5b72e1, type: 2}
+  startingOffHand:
+  - {fileID: 11400000, guid: 16d4aeef7846cad4aa19b9cd488741ef, type: 2}
+  - {fileID: 11400000, guid: d87bf7fc717740a4da7099fd1c2a9bfe, type: 2}
+  - {fileID: 11400000, guid: 9e6026bb29d1bfb4287556b67986e3bd, type: 2}
+  - {fileID: 11400000, guid: 81b703027c3ad2643a4cb863aa864070, type: 2}
+  - {fileID: 11400000, guid: b471b6d9d23869a4c91aaff160ce3505, type: 2}
+  - {fileID: 11400000, guid: 1e7b4e5e7d0889746b11e42be2f62999, type: 2}
+  noItem: {fileID: 11400000, guid: cd100268cc0e4de4a8d15a8a3af7f615, type: 2}
+--- !u!114 &7920262393148086569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f58b1016914df47b20a15528922ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - {fileID: -5224827079675077588, guid: b76c5db54e3b9f74db7e80425911e3bc, type: 3}
+  - {fileID: -1966978551716094298, guid: 941ae56479fff1f4f810f865b81157b2, type: 3}
+  - {fileID: -1923240464196847965, guid: 246477b1e4612d044b0e6e9ad8bdedb0, type: 3}
+  rosterEvent: {fileID: 8153721776464911368, guid: bddcaa0890912a747bac1fc26df98d2b, type: 3}
+  rosterEvents: []
+--- !u!114 &7715135372028711357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c59096f812a4d4db3e5223c3888128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Day:
+  - None
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  - Sunday
+  Week:
+  - None
+  - First
+  - Second
+  - Third
+  - Fourth
+  Month:
+  - None
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
+  minute: 0
+  hour: 0
+  day: 0
+  week: 0
+  month: 0
+  year: 0
+  timeDisplay:
+  - {fileID: 0}
+--- !u!114 &6942688606404296749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454802126791340536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50229176403a5134aaaa95209d491d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roster: []
+  availableToday: []
+  guildRenown: 0
+  guildCurrency: 0
+  orderCooldown: 3
+  targetPlayer: {fileID: 0}
+  manageState: 0
+  seeHidden: 0
+  unknown: {fileID: 1776658392, guid: 9e96c8808a11618479820399f4282f84, type: 3}
+  itemToolTipHold: 0
+  guildToolTipHold: 0
+  scheduleDay: 0
+  showPlayer: 0
+  itemList: []
+  nextRoster: {fileID: 0}
+  availableUpgrades:
+  - {fileID: -7063486763816426816, guid: b52b5dea102108f45add41b1a8c3d9d5, type: 3}
+  - {fileID: -9028739049004566062, guid: 320e56881d57d44489a3e907027c6216, type: 3}
+  - {fileID: 5298923081825329888, guid: 3e7303e43ff66ec4ba8fd3095e4cb63f, type: 3}
+  - {fileID: -2135900901941104120, guid: 374f4c09634f5474099c5a6093b6014b, type: 3}
+  - {fileID: 4079568960501154951, guid: fc699181b109c3f4f8d3204aa9d27134, type: 3}
+  - {fileID: -5353887579761403973, guid: bc57fe41852f1e245990ea504ac0e2ca, type: 3}
+  - {fileID: -7439675107025726969, guid: 517e6b7e0df356440b67deac9db899a8, type: 3}
+  - {fileID: 1268421034594017927, guid: 01c3753f683a37f4dbac71c8907ad0f7, type: 3}
+  - {fileID: -1812145767793700800, guid: ef89fc416c7a0e24689372091a681687, type: 3}
+  currentUpgrades: []
+  targetUpgrade: {fileID: 0}

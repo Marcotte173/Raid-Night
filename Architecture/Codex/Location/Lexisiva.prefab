@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &51803004498084648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9098095657692465421}
+  - component: {fileID: 4195247133188158093}
+  m_Layer: 5
+  m_Name: Lexisiva
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9098095657692465421
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51803004498084648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4195247133188158093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51803004498084648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2f070e45c039e4c96d9d15452a3ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  codexName: Lexisiva
+  discovered: 1
+  entryNamePage:
+  - Lexisiva
+  - Lexisiva
+  entry1Page:
+  - "The Desert city of Lexisiva is the largest city on Degora. The Matriarchal Saurian
+    port city is ruled by the Sorcerer Queen Rushasthihar\u200B, though in recent
+    years her grasp on the city has become tenuous.\n\nThe self-styled Merchant Princes
+    hatched a plot in secret to overthrow the city and in a single deadly night set
+    their plan in motion. "
+  - Weeks of fighting erupted, with painful losses on both sides as well as civilian
+    casualties before a ceasefire was negotiated. The military fractured and both
+    sides without a position to clearly retake power a cold war brewed.
+  entry2Page:
+  - The Merchant princes, mercenaries, and bought and paid for insiders in the military
+    rose against mostly unsuspecting royalty and nobility and slew a number of nobles,
+    the king and the princesses but thanks to the loyalty of large portions of the
+    Lexisivan military and the royal guard the Queen and several powerful noble families
+    survived the night.
+  - 'For 10 years the citizens of Lexisiva have been waiting, knowing that war is
+    coming, but not knowing what will reignite the conflict. '
+  entryImagePage:
+  - {fileID: 21300000, guid: 85c095c2b2fb95b4eba9133756668210, type: 3}
+  - {fileID: 21300000, guid: 85c095c2b2fb95b4eba9133756668210, type: 3}
+  entries: []
