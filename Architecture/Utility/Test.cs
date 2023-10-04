@@ -160,7 +160,7 @@ public class Test : MonoBehaviour
             else if (p.currentClass.GetType() == typeof(Rogue)) p.currentClass.GetComponent<RogueDecision>().UpdateSkill();
             else if (p.currentClass.GetType() == typeof(ShieldBearer)) p.currentClass.GetComponent<ShieldBearerDecision>().UpdateSkill();
         }
-        Utility.instance.TurnOff(UIManager.instance.testMenu);
+        UIManager.instance.PVEStart();
         DungeonManager.instance.TestRaid(testDungeon, testAgentsToGoInDungeon);
     }
 }

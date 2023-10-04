@@ -25,7 +25,7 @@ public class Summon : Class
         {
             if(UserControl.instance.selectedCharacter == this)
             {
-                DungeonManager.instance.currentDungeon.currentEncounter.GetComponent<EncounterUI>().select = false;
+                EncounterUI.instance.select = false;
                 UserControl.instance.selectedCharacter = null;
             }
             DungeonManager.instance.currentDungeon.currentEncounter.playerMinionSummons.Remove(this);

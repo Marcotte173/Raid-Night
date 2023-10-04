@@ -7,10 +7,8 @@ using System;
 
 public class Rewards : MonoBehaviour
 {
-    [HideInInspector]
+    public static Rewards instance;
     public Encounter currentEncounter;
-    [HideInInspector]
-    public PreEncounter preEncounter;
     public int reward;
     public TMP_Text itemName;
     public TMP_Text itemType;
@@ -61,8 +59,7 @@ public class Rewards : MonoBehaviour
 
     private void Awake()
     {
-        currentEncounter = GetComponent<Encounter>();
-        preEncounter = GetComponent<PreEncounter>();
+        instance = this;
     }
 
     public void Begin()

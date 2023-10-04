@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5159008379281963928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8676550912881450861}
+  - component: {fileID: -6044392388783293414}
+  - component: {fileID: 1260055568161627315}
+  - component: {fileID: -5909260343461824014}
+  m_Layer: 0
+  m_Name: Paladin Of Durona Encounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8676550912881450861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 837.4492, y: 617.4218, z: -165.00105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6044392388783293414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30021fff6edad0488d9da8475ea6552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tankAtHome: {fileID: 0}
+  circumstance: 0
+  chosenCharacter: {fileID: 0}
+  end: 0
+  genericNumber: 0
+--- !u!114 &1260055568161627315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b0a804e1679904282ccee046dda98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5909260343461824014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c080977e5f20649a193be2b57243a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  attempt: 0
+  bossSummon:
+  - {fileID: -2728844852211971005, guid: c6c1ed63346f325429a035893d0a065a, type: 3}
+  boss: []
+  player: []
+  playerMinionSummons: []
+  bossMinionSummons: []
+  tileList: []
+  occupied: []
+  arenaSizeX: 15
+  arenaSizeY: 15
+  cameraY: 5.5
+  dropAmount: 2
+  possibleDrops:
+  - {fileID: 11400000, guid: 9e6caff5181a755428ee353dc73e8d5b, type: 2}
+  - {fileID: 11400000, guid: e4ffad737ed244546a3158ec5699bd27, type: 2}
+  - {fileID: 11400000, guid: 6be4c56d43740a5459b387bf72ddcb26, type: 2}
+  - {fileID: 11400000, guid: 7e0ccd500499d484fafb47a302e3e6a8, type: 2}
+  - {fileID: 11400000, guid: 54e31db49dc88914f85398b6ca362449, type: 2}
+  drops: []
+  enemyHazards: []
+  playerHazards: []
+  maximumYPlace: 7
+  objects: []
+  pullTime: 15
+  bossFightTime: 20
+  bossLocation:
+  - {x: 7, y: 8}
+  preEncounter: {fileID: 0}
+  tank: {fileID: 0}
+  offTank: {fileID: 0}
+  healer: {fileID: 0}
+  offHealer: {fileID: 0}
+  characterMoveTiles: []
+  possibleFlagTiles: []
+  redFlagTiles: []
+  greenFlagTiles: []
+  blueFlagTiles: []
+  yellowFlagTiles: []
+  howManyFlags: 2
+  selected: 0
+  orders: 0
+  selectedTarget: {fileID: 0}
+  selectedCharacters: []
+  orderWaitLength: 5
+  targetOverrideLength: 15
+  orderTextLength: 2
+  selectText: 
+  orderText: 
+  fullOrderText: 
+  orderCooldownTimer: 0
+  orderTimer: 0

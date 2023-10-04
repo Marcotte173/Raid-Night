@@ -59,8 +59,6 @@ public class EncounterUI : MonoBehaviour
     [HideInInspector]
     public Encounter currentEncounter;
     [HideInInspector]
-    public Rewards rewards;
-    [HideInInspector]
     public bool select;
     public bool basicStats;
     public bool modInfo;
@@ -81,9 +79,6 @@ public class EncounterUI : MonoBehaviour
     public List<Slider> enemyHBarUI;
     public List<TMP_Text> playerTextUI;
     public List<TMP_Text> enemyTextUI;
-    public GameObject preEncounterObject;
-    public GameObject combatObject;
-    public GameObject rewardsObject;
     public GameObject arenaGameObject;
     public GameObject charactersGameObject;
     [HideInInspector]
@@ -507,4 +502,22 @@ public class EncounterUI : MonoBehaviour
         list[6].text = $"Physical Damage: {character.physicalDamageMod.value * 100}%";
         list[7].text = $"Thorns: {character.thorns.value}";
     }
+    public void BlueFlag() => currentEncounter.Order(1);
+    public void RedFlag() => currentEncounter.Order(2);
+    public void GreenFlag() => currentEncounter.Order(3);
+    public void YellowFlag() => currentEncounter.Order(4);
+    public void AllFlag() => currentEncounter.Order(5);
+    public void SelectedWait() => currentEncounter.Order(6);
+    public void SelectedResume() => currentEncounter.Order(7);
+    public void SelectedTarget() => currentEncounter.Order(8);
+    public void AllWait() => currentEncounter.Order(9);
+    public void AllResume() => currentEncounter.Order(10);
+    public void AllTarget() => currentEncounter.Order(11);
+    public void RunFromHazard() => currentEncounter.Order(12);
+    public void RunToBoss() => currentEncounter.Order(13);
+    public void RunFromBoss() => currentEncounter.Order(14);
+    public void SelectAll() => currentEncounter.Select(currentEncounter.player, Selected.All);
+    public void Tank() => currentEncounter.Select(currentEncounter.FindTank(), Selected.TANK);
+    public void DPS() => currentEncounter.Select(currentEncounter.FindDPS(), Selected.DPS);
+    public void Support() => currentEncounter.Select(currentEncounter.FindSupport(), Selected.SUPPORT);
 }

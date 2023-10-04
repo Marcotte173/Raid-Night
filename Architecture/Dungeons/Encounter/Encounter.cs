@@ -11,12 +11,18 @@ public enum Selected { NONE, All, DPS, TANK, SUPPORT, SELECT };
 public enum Orders { NONE, Red, Blue, Green, Yellow, Close,Focus,Stop,Resume,HazardMove,ToBoss,FromBoss };
 public class Encounter : MonoBehaviour
 {
+    [HideInInspector]
     public int id;
+    [HideInInspector]
     public int attempt;
     public List<Character> bossSummon;
+    [HideInInspector]
     public List<Character> boss;
+    [HideInInspector]
     public List<Character> player;
+    [HideInInspector]
     public List<Character> playerMinionSummons;
+    [HideInInspector]
     public List<Character> bossMinionSummons;
     [HideInInspector]
     public List<Tile> tileList;
@@ -25,22 +31,23 @@ public class Encounter : MonoBehaviour
     public int arenaSizeX;
     public int arenaSizeY;
     public float cameraY;
+    public float cameraSize;
     public int dropAmount;
     public List<ItemSO> possibleDrops;
     [HideInInspector]
     public List<ItemSO> drops;
+    [HideInInspector]
     public List<Hazard> enemyHazards;
     [HideInInspector]
     public List<Hazard> playerHazards;   
-    public float maximumYPlace;
+    public int pullRange;
+    [HideInInspector]
     public List<GameObject> objects;    
     public int pullTime;
     public int bossFightTime;
     public List<Vector2> bossLocation;
     [HideInInspector]
     public PreEncounter preEncounter;
-    [HideInInspector]
-    public Rewards rewards;
     [HideInInspector]
     public Character tank;
     [HideInInspector]
@@ -61,28 +68,34 @@ public class Encounter : MonoBehaviour
     public List<Tile> blueFlagTiles;
     [HideInInspector]
     public List<Tile> yellowFlagTiles;
-    public int howManyFlags;  
+    public int howManyFlags;
+    [HideInInspector]
     public Selected selected;
+    [HideInInspector]
     public Orders orders;
+    [HideInInspector]
     public Character selectedTarget;
+    [HideInInspector]
     public List<Character> selectedCharacters;
     [HideInInspector]
     public float orderWaitLength;
     [HideInInspector]
     public float targetOverrideLength;
     public float orderTextLength;
-    public EncounterUI encounterUI;
+    [HideInInspector]
     public string selectText;
+    [HideInInspector]
     public string orderText;
+    [HideInInspector]
     public string fullOrderText;
+    [HideInInspector]
     public float orderCooldownTimer;
+    [HideInInspector]
     public float orderTimer;
 
     public void Awake()
     {
-        encounterUI = GetComponent<EncounterUI>();
         preEncounter = GetComponent<PreEncounter>();
-        rewards = GetComponent<Rewards>();
     }
 
     public void EncounterUpdate()
@@ -206,7 +219,7 @@ public class Encounter : MonoBehaviour
     }
     public virtual void CreateArena()
     {
-        for (int y = 0; y < arenaSizeX; y++) for (int x = 0; x < arenaSizeY; x++) tileList.Add(TileCreate(x, y));
+        for (int y = 0; y < arenaSizeY; y++) for (int x = 0; x < arenaSizeX; x++) tileList.Add(TileCreate(x, y));
         foreach (Tile l in tileList)
         {
             foreach (Tile loc in tileList)
@@ -223,13 +236,13 @@ public class Encounter : MonoBehaviour
             }
         }        
         Camera.main.transform.position = new Vector3(arenaSizeX / 2, cameraY, -10);
-        Camera.main.orthographicSize = arenaSizeX / 2;
+        Camera.main.orthographicSize = cameraSize;
     }    
 
     public virtual void ResetEncounter()
     {
-        foreach (Slider b in GetComponent<EncounterUI>().playerHBarUI) Utility.instance.TurnOff(b.gameObject);
-        foreach (Slider b in GetComponent<EncounterUI>().enemyHBarUI) Utility.instance.TurnOff(b.gameObject);
+        foreach (Slider b in EncounterUI.instance.playerHBarUI) Utility.instance.TurnOff(b.gameObject);
+        foreach (Slider b in EncounterUI.instance.enemyHBarUI) Utility.instance.TurnOff(b.gameObject);
         ClearAllLists();
         foreach (Character a in player.ToList())
         {
@@ -246,13 +259,14 @@ public class Encounter : MonoBehaviour
         ResetOrders();
         EncounterUI.instance.TurnOffBackgrounds();
         UserControl.instance.control = Control.PlayerChoice;
+        UIManager.instance.PreEncounter();
     }
 
     public virtual void PopulatePlayers()
     {
         for (int i = 0; i < DungeonManager.instance.currentDungeon.agentsInDungeon.Count; i++)
         {
-            DungeonManager.instance.PutInArena(DungeonManager.instance.currentDungeon.agentsInDungeon[i].player, new Vector2(i + 1, 1));
+            DungeonManager.instance.PutInArena(DungeonManager.instance.currentDungeon.agentsInDungeon[i].player, new Vector2(2, 10-i));
         }
         DungeonManager.instance.currentDungeon.agentsInDungeon.Clear();
         foreach (Character a in player)
@@ -292,19 +306,12 @@ public class Encounter : MonoBehaviour
     }
     public void PreSetup()
     {
-        Utility.instance.TurnOn(encounterUI.preEncounterObject);
-        Utility.instance.TurnOff(encounterUI.combatObject);
-        Utility.instance.TurnOff(encounterUI.rewardsObject);
         DungeonManager.instance.raidMode = RaidMode.PreSetup;
     }
 
     public void PreEncounter()
     {
-        Utility.instance.TurnOn(encounterUI.preEncounterObject);
-        Utility.instance.TurnOff(encounterUI.combatObject);
-        Utility.instance.TurnOff(encounterUI.rewardsObject);
         EncounterUI.instance.currentEncounter = this;
-        EncounterUI.instance.currentEncounter.rewards = GetComponent<Rewards>();
         DungeonManager.instance.raidMode = RaidMode.PreDungeon;
     }
 
@@ -312,7 +319,7 @@ public class Encounter : MonoBehaviour
     {
         for (int i = 0; i < bossSummon.Count; i++)
         {
-            Character b = Instantiate(bossSummon[i], encounterUI.charactersGameObject.transform);
+            Character b = Instantiate(bossSummon[i], EncounterUI.instance.charactersGameObject.transform);
             DungeonManager.instance.PutInArena(b, new Vector2(bossLocation[i].x, bossLocation[i].y));
         }
         foreach (Character a in BossAndMinion())
@@ -342,14 +349,16 @@ public class Encounter : MonoBehaviour
 
     internal void AddFlags()
     {
-        foreach (Tile t in tileList) if (t.x > 0 && t.x < arenaSizeX - 1 && t.y > 0 && t.y < maximumYPlace) if (t.id == 0) characterMoveTiles.Add(t);
+        List<Tile> noGo = FindTile.instance.TilesInRange(pullRange, FindTile.instance.Location(bossLocation[0]));
+        Debug.Log(noGo.Count);
+        foreach(Tile t in tileList) if (t.id == 0&& !noGo.Contains(t)) characterMoveTiles.Add(t);
         foreach (Tile t in tileList) if (t.x > 0 && t.x < arenaSizeX - 1 && t.y > 0 && t.y < arenaSizeX - 1) if (t.id == 0) possibleFlagTiles.Add(t);
         for (int i = 0; i < howManyFlags; i++)
         {
             Tile t = TileCreate(-1, 1+i);
             t.GetComponent<SpriteRenderer>().sprite = SpriteList.instance.flagGroundColor[i * 2];
-            Flag f = Instantiate(GameObjectList.instance.flag, encounterUI.arenaGameObject.transform);
-            encounterUI.flags.Add(f);
+            Flag f = Instantiate(GameObjectList.instance.flag, EncounterUI.instance.arenaGameObject.transform);
+            EncounterUI.instance.flags.Add(f);
             f.GetComponent<SpriteRenderer>().sprite = SpriteList.instance.flagColor[i];
             f.id = i;
             f.home = t;
@@ -359,7 +368,7 @@ public class Encounter : MonoBehaviour
 
     public Tile TileCreate(int x, int y)
     {
-        Tile l = Instantiate(GameObjectList.instance.tile, encounterUI.arenaGameObject.transform);
+        Tile l = Instantiate(GameObjectList.instance.tile, EncounterUI.instance.arenaGameObject.transform);
         l.x = x;
         l.y = y;        
         l.transform.position = new Vector2(l.x, l.y);
@@ -376,10 +385,7 @@ public class Encounter : MonoBehaviour
         selectedCharacters = list.ToList();
         GiveOrders();        
     }
-    public void SelectAll() => Select(player, Selected.All);
-    public void Tank() => Select(FindTank(), Selected.TANK);
-    public void DPS() => Select(FindDPS(), Selected.DPS);
-    public void Support() => Select(FindSupport(), Selected.SUPPORT);
+    
 
     public List<Character> FindDPS()
     {
@@ -420,20 +426,8 @@ public class Encounter : MonoBehaviour
     //Giving the Order
     //*********************
 
-    public void BlueFlag() => Order(1);
-    public void RedFlag() => Order(2);
-    public void GreenFlag() => Order(3);
-    public void YellowFlag() => Order(4);
-    public void AllFlag() => Order(5);
-    public void SelectedWait() => Order(6);
-    public void SelectedResume() => Order(7);
-    public void SelectedTarget() => Order(8);
-    public void AllWait() => Order(9);
-    public void AllResume() => Order(10);
-    public void AllTarget() => Order(11);
-    public void RunFromHazard() => Order(12);
-    public void RunToBoss() => Order(13);
-    public void RunFromBoss() => Order(14);
+   
+   
 
     public void Order(int x)
     {
@@ -627,18 +621,18 @@ public class Encounter : MonoBehaviour
         selected = Selected.NONE;
         orders = Orders.NONE;
         selectedCharacters.Clear();
-        encounterUI.OrderToolTipOff();
+        EncounterUI.instance.OrderToolTipOff();
     }
     private void SoftResetOrders()
     {
-        encounterUI.OrderToolTipOff();
+        EncounterUI.instance.OrderToolTipOff();
     }
     public void GiveOrders()
     {
-        encounterUI.OrderToolTipOff();
+        EncounterUI.instance.OrderToolTipOff();
         orders = Orders.NONE;
-        Utility.instance.TurnOff(encounterUI.runFromHazardButton.gameObject);
-        if (RunFromHazardButtonCheck()) Utility.instance.TurnOn(encounterUI.runFromHazardButton.gameObject);
+        Utility.instance.TurnOff(EncounterUI.instance.runFromHazardButton.gameObject);
+        if (RunFromHazardButtonCheck()) Utility.instance.TurnOn(EncounterUI.instance.runFromHazardButton.gameObject);
     }
     private bool RunFromHazardButtonCheck()
     {

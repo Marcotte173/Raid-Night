@@ -17025,7 +17025,6 @@ MonoBehaviour:
   bossFightTime: 0
   bossLocation: []
   preEncounter: {fileID: 8892171370745910553}
-  rewards: {fileID: 9051170529440624214}
   tank: {fileID: 0}
   offTank: {fileID: 0}
   healer: {fileID: 0}
@@ -17044,7 +17043,6 @@ MonoBehaviour:
   orderWaitLength: 0
   targetOverrideLength: 0
   orderTextLength: 0
-  encounterUI: {fileID: 0}
   selectText: 
   orderText: 
   fullOrderText: 
@@ -17235,7 +17233,6 @@ MonoBehaviour:
   - {fileID: 1213420043496082483}
   - {fileID: 5248052396745618643}
   currentEncounter: {fileID: 0}
-  rewards: {fileID: 0}
   select: 0
   basicStats: 0
   modInfo: 0
@@ -17335,9 +17332,6 @@ MonoBehaviour:
   enemyHBarUI: []
   playerTextUI: []
   enemyTextUI: []
-  preEncounterObject: {fileID: 0}
-  combatObject: {fileID: 0}
-  rewardsObject: {fileID: 0}
   arenaGameObject: {fileID: 0}
   charactersGameObject: {fileID: 0}
   flags: []
@@ -17360,7 +17354,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEncounter: {fileID: 0}
-  preEncounter: {fileID: 0}
   reward: 0
   itemName: {fileID: 1101815943011407628}
   itemType: {fileID: 4429522247783879611}

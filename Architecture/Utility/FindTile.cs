@@ -244,4 +244,17 @@ public class FindTile : MonoBehaviour
         }
         return null;
     }
+    public List<Tile> TilesInRange(int range,Tile tile)
+    {
+        List<Tile> list = new List<Tile> {tile };
+        for (int i = 0; i < range; i++) foreach (Tile t in list.ToList()) foreach (Tile n in t.neighbor) if (Cardinal(n, t) && !list.Contains(n)) list.Add(n);
+        return list;
+    }
+
+    private bool Cardinal(Tile n, Tile t)
+    {
+        if (n.x == t.x + 1 && (n.y == t.y + 1 || n.y == t.y - 1)) return false;
+        if (n.x == t.x - 1 && (n.y == t.y + 1 || n.y == t.y - 1)) return false;
+        return true;
+    }
 }

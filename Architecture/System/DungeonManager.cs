@@ -42,13 +42,13 @@ public class DungeonManager : MonoBehaviour
     public void PutInArena(Player p, Vector2 position)
     {
         currentDungeon.currentEncounter.player.Add(p.currentClass);              
-        p.transform.SetParent(currentDungeon.currentEncounter.encounterUI.charactersGameObject.transform);
+        p.transform.SetParent(EncounterUI.instance.charactersGameObject.transform);
         p.transform.position = position;
     }
     public void PutInArena(Character p, Vector2 position)
     {
         currentDungeon.currentEncounter.boss.Add(p);        
-        p.transform.SetParent(currentDungeon.currentEncounter.encounterUI.charactersGameObject.transform);
+        p.transform.SetParent(EncounterUI.instance.charactersGameObject.transform);
         p.transform.position = position;
     }
     public void SendHome(Player p)

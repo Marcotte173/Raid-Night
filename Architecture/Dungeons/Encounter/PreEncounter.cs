@@ -13,7 +13,7 @@ public class PreEncounter : MonoBehaviour
     public bool end;
     public int genericNumber;
     public virtual void Ready()
-    {
+    {        
         chosenCharacter = null;
         EncounterUI.instance.currentEncounter.tank = null;
         EncounterUI.instance.currentEncounter.offTank = null;
@@ -187,7 +187,11 @@ public class PreEncounter : MonoBehaviour
     }
     public void Button1()
     {
-        if (DungeonManager.instance.raidMode == RaidMode.PreSetup) DungeonManager.instance.currentDungeon.GetComponent<EncounterManager>().BeginPlacement();
+        if (DungeonManager.instance.raidMode == RaidMode.PreSetup)
+        {
+            UIManager.instance.Combat();
+            DungeonManager.instance.currentDungeon.GetComponent<EncounterManager>().BeginPlacement();
+        }
         else ButtonOne();
     }
     public virtual void ButtonOne()

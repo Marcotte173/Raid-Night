@@ -650,7 +650,7 @@ public class Character : MonoBehaviour
                 }
                 Debug.Log(x);
                 DungeonManager.instance.currentDungeon.currentEncounter.objects.Clear();
-                DungeonManager.instance.currentDungeon.currentEncounter.GetComponent<EncounterUI>().UpdateSmallUI();
+                EncounterUI.instance.UpdateSmallUI();
                 EndMatch.instance.FindWinner();
             }
         }        

@@ -66,28 +66,24 @@ public class EncounterManager : MonoBehaviour
     
     public void Combat()
     {
-        Utility.instance.TurnOn(currentEncounter.encounterUI.combatObject);
-        Utility.instance.TurnOff(currentEncounter.encounterUI.preEncounterObject);
-        Utility.instance.TurnOff(currentEncounter.encounterUI.rewardsObject);
         DungeonManager.instance.raidMode = RaidMode.Setup;
-        foreach (Flag f in currentEncounter.encounterUI.flags)
+        foreach (Flag f in EncounterUI.instance.flags)
         {            
             Utility.instance.TurnOn(f.gameObject);
             f.transform.position = f.home.transform.position;
         }
-        foreach (Button b in currentEncounter.encounterUI.flagButtons) Utility.instance.TurnOff(b.gameObject);        
+        foreach (Button b in EncounterUI.instance.flagButtons) Utility.instance.TurnOff(b.gameObject);        
     }
     public void Rewards()
     {
-        Utility.instance.TurnOn(currentEncounter.encounterUI.rewardsObject);
-        Utility.instance.TurnOff(currentEncounter.encounterUI.preEncounterObject);
-        Utility.instance.TurnOff(currentEncounter.encounterUI.combatObject);
+        UIManager.instance.Rewards();
         DungeonManager.instance.raidMode = RaidMode.Rewards;
     }    
 
     internal void BeginRewards()
     {
         Rewards();
-        currentEncounter.rewards.Begin();
+        global::Rewards.instance.currentEncounter=currentEncounter;
+        global::Rewards.instance.Begin();
     }
 }

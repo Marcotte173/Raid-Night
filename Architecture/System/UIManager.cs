@@ -13,6 +13,11 @@ public class UIManager : MonoBehaviour
     public GameObject testMenu;
     public GameObject guild;
     public GameObject events;
+    public GameObject encounter;
+    public GameObject preEncounter;
+    public GameObject combat;
+    public GameObject combatUI;
+    public GameObject rewards;
     public Image background;
     private void Start()
     {
@@ -28,6 +33,8 @@ public class UIManager : MonoBehaviour
         Utility.instance.TurnOff(dungeons);
         Utility.instance.TurnOff(menu);
         Utility.instance.TurnOff(events);
+        Utility.instance.TurnOff(encounter);
+        Utility.instance.TurnOff(testMenu);
     }
 
     public void Menu()
@@ -40,6 +47,8 @@ public class UIManager : MonoBehaviour
         Utility.instance.TurnOff(events);
         background.sprite = SpriteList.instance.menuBackGround;
         global::Menu.instance.UpdateButtons();
+        Utility.instance.TurnOff(encounter);
+        Utility.instance.TurnOff(testMenu);
     }
     public void Event()
     {
@@ -52,6 +61,8 @@ public class UIManager : MonoBehaviour
         Debug.Log("On");
         background.sprite = SpriteList.instance.menuBackGround;
         global::Menu.instance.UpdateButtons();
+        Utility.instance.TurnOff(encounter);
+        Utility.instance.TurnOff(testMenu);
     }
     public void ViewGuild() 
     {
@@ -59,7 +70,9 @@ public class UIManager : MonoBehaviour
         Utility.instance.TurnOff(menu);
         Utility.instance.TurnOff(mainMenu);
         if (dungeons != null) Utility.instance.TurnOff(dungeons);
-        Utility.instance.TurnOn(guild);        
+        Utility.instance.TurnOn(guild);
+        Utility.instance.TurnOff(encounter);
+        Utility.instance.TurnOff(testMenu);
     }
     public void PVEMenu()
     {
@@ -70,6 +83,8 @@ public class UIManager : MonoBehaviour
         Utility.instance.TurnOff(guild);
         background.sprite = SpriteList.instance.menuBackGround;
         global::Menu.instance.UpdateButtons();
+        Utility.instance.TurnOff(encounter);
+        Utility.instance.TurnOff(testMenu);
     }
     public void PVELoadStart()
     {
@@ -78,6 +93,8 @@ public class UIManager : MonoBehaviour
         Utility.instance.TurnOff(mainMenu);
         if (dungeons != null) Utility.instance.TurnOff(dungeons);
         Utility.instance.TurnOn(guild);
+        Utility.instance.TurnOff(encounter);
+        Utility.instance.TurnOff(testMenu);
     }
 
     public void PVEStart()
@@ -87,6 +104,29 @@ public class UIManager : MonoBehaviour
         Utility.instance.TurnOff(mainMenu);
         Utility.instance.TurnOff(background.gameObject);
         Utility.instance.TurnOn(dungeons.gameObject);
+        Utility.instance.TurnOn(encounter);
+        Utility.instance.TurnOff(testMenu);
+    }
+    public void PreEncounter()
+    {
+        Utility.instance.TurnOn(preEncounter);
+        Utility.instance.TurnOff(combat);
+        Utility.instance.TurnOff(rewards);
+        Utility.instance.TurnOff(combatUI);
+    }
+    public void Combat()
+    {
+        Utility.instance.TurnOff(preEncounter);
+        Utility.instance.TurnOn(combat);
+        Utility.instance.TurnOff(rewards);
+        Utility.instance.TurnOn(combatUI);
+    }
+    public void Rewards()
+    {
+        Utility.instance.TurnOff(preEncounter);
+        Utility.instance.TurnOff(combat);
+        Utility.instance.TurnOn(rewards);
+        Utility.instance.TurnOff(combatUI);
     }
 
     public void NightOff()
