@@ -543,7 +543,7 @@ MonoBehaviour:
   target: {fileID: 0}
   targetFromTaunt: {fileID: 0}
   orderTarget: {fileID: 0}
-  characterName: Paladin of Ceres
+  characterName: Paladin Of Ceres
   resPriority: 0
   maxHealth:
     baseValue: 3500

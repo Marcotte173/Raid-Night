@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         instance = this;
+        SoundManager.instance.PlayMusic(SoundList.instance.creditIntroTheme);
         EventList.instance.MakeEvents();
         CodexManager.instance.Generate();
     }   

@@ -89,6 +89,7 @@ public class EncounterUI : MonoBehaviour
     public Button runFromHazardButton;    
     public GameObject orderToolTipBox;
     public List<TMP_Text> orderToolTipFlavor;
+    public List<Image> uIHealthRoleButtons;
     private void Awake()
     {
         instance = this;
@@ -377,7 +378,8 @@ public class EncounterUI : MonoBehaviour
     public void FightBoxButton()
     {
         if(DungeonManager.instance.raidMode == RaidMode.Setup)
-        {            
+        {
+            currentEncounter.StartMusic();
             Utility.instance.TurnOff(preFightBox.gameObject);            
             TurnOnFightButtons();
             DungeonManager.instance.raidMode = RaidMode.Combat;
@@ -396,8 +398,20 @@ public class EncounterUI : MonoBehaviour
         currentEncounter.orders = Orders.NONE;
         foreach (Slider b in playerHBarUI) Utility.instance.TurnOff(b.gameObject);
         foreach (Slider b in enemyHBarUI) Utility.instance.TurnOff(b.gameObject);
-        for (int i = 0; i < currentEncounter.player.Count; i++) Utility.instance.TurnOn(playerHBarUI[i].gameObject);
+        for (int i = 0; i < currentEncounter.player.Count; i++)
+        {
+            Spec s = Utility.instance.ReturnSpec(currentEncounter.player[i]);
+            Utility.instance.TurnOn(playerHBarUI[i].gameObject);
+            if (s == Spec.Explosive) uIHealthRoleButtons[i].sprite = SpriteList.instance.roleImages[2];
+            else if (s == Spec.Focused) uIHealthRoleButtons[i].sprite = currentEncounter.player[i].player.currentClass.GetComponent<Rogue>() ? SpriteList.instance.roleImages[1] : SpriteList.instance.roleImages[2];
+            else if (s == Spec.Inspiring) uIHealthRoleButtons[i].sprite = SpriteList.instance.roleImages[4];
+            else if (s == Spec.Redemptive) uIHealthRoleButtons[i].sprite = SpriteList.instance.roleImages[3];
+            else if (s == Spec.Stalwart) uIHealthRoleButtons[i].sprite = SpriteList.instance.roleImages[0];
+            else if (s == Spec.Tranquil) uIHealthRoleButtons[i].sprite = SpriteList.instance.roleImages[3];
+            else if (s == Spec.Wrathful) uIHealthRoleButtons[i].sprite = currentEncounter.player[i].player.currentClass.GetComponent<Rogue>()?SpriteList.instance.roleImages[1]: SpriteList.instance.roleImages[2];
+        }
         for (int i = 0; i < currentEncounter.Boss().Count; i++) Utility.instance.TurnOn(enemyHBarUI[i].gameObject);
+
         if (currentEncounter.howManyFlags > 0)
         {
             if (currentEncounter.FindDPS().Count > 0) Utility.instance.TurnOn(DPSSelect.gameObject);

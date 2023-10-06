@@ -520,7 +520,12 @@ public class Encounter : MonoBehaviour
         }
         ResetOrders();
         orderCooldownTimer = Guild.instance.orderCooldown;
-    }   
+    }
+
+    internal void StartMusic()
+    {
+        GetComponent<PreEncounter>().StartThemeSong();
+    }
 
 
     //**************************************************************************************

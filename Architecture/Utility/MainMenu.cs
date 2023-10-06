@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         logo.SetActive(true);
+        
         instance = this;
     }
     public void Update()
@@ -29,6 +30,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         DataPersistenceManager.instance.NewGame();
+        SoundManager.instance.PlayMusic(SoundList.instance.CurrentMenuTheme());
         //UIManager.instance.Menu();
 
     }

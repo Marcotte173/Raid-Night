@@ -55,4 +55,8 @@ public class PaladinOfAkalosPreEncounter : PreEncounter
         TimeManagement.instance.MinuteAdd(EncounterUI.instance.currentEncounter.pullTime);
         Setup("Ok");
     }
+    public override void StartThemeSong()
+    {
+
+    }
 }

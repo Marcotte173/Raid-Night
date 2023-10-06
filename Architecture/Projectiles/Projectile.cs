@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour
     public bool aoe;
     public string projectileName;
     public float range;
+    public AudioClip soundClip;
     private void Start()
     {
         DungeonManager.instance.currentDungeon.currentEncounter.objects.Add(gameObject);
@@ -30,6 +31,7 @@ public class Projectile : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * UnityEngine.Time.deltaTime);
             if (Vector2.Distance(transform.position, target.transform.position) < 0.3f)
             {
+                SoundManager.instance.PlayEffect(soundClip);
                 ProjectileEffect();
             }
         }

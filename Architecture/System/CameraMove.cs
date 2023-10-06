@@ -18,13 +18,13 @@ public class CameraMove : MonoBehaviour
 
     public void UpdateCamera()
     {
-        if (UserControl.instance.control == Control.PlayerChoice) body.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * cameraMove, Input.GetAxisRaw("Vertical") * cameraMove);
-        else
-        {
-            Vector3 targetPos = new Vector3(UserControl.instance.controlledCharacter.transform.position.x, UserControl.instance.controlledCharacter.transform.position.y, -10);
-            transform.position = Vector3.Lerp(transform.position, targetPos, cameraMove * Time.deltaTime);
-        }
-        Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * cameraScroll;
+        //if (UserControl.instance.control == Control.PlayerChoice) body.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * cameraMove, Input.GetAxisRaw("Vertical") * cameraMove);
+        //else
+        //{
+        //    Vector3 targetPos = new Vector3(UserControl.instance.controlledCharacter.transform.position.x, UserControl.instance.controlledCharacter.transform.position.y, -10);
+        //    transform.position = Vector3.Lerp(transform.position, targetPos, cameraMove * Time.deltaTime);
+        //}
+        //Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * cameraScroll;
     }
 
     private void Move(int x, int y)

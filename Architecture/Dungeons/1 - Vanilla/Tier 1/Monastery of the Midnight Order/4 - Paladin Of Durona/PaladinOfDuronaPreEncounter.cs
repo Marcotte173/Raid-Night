@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class PaladinOfDuronaPreEncounter : PreEncounter
 {
-    
+    public override void StartThemeSong()
+    {
+
+    }
 }

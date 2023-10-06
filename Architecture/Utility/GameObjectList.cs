@@ -15,7 +15,7 @@ public class GameObjectList : MonoBehaviour
     public Projectile simpleProjectile;
     public ProjectilePlayer playerProjectile;
     public ProjectileEnemy enemyProjectile;
-    public OrcHazard orcHazard;
+    public CleansingFlame orcHazard;
     public ClawsFromTheDeepHazard clawsFromTheDeep;
     public ShieldWallInspireHazard shieldWallInspire;
     public Animator animator;

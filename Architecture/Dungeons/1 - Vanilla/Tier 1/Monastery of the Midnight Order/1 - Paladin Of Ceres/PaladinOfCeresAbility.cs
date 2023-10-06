@@ -58,8 +58,9 @@ public class PaladinOfCeresAbility : Ability
             Utility.instance.DamageNumber(character, "Cleansing Flame", SpriteList.instance.bad);
             verb = "FireBlast";
             //Circle of Flames Ability
-            OrcHazard r = Instantiate(GameObjectList.instance.orcHazard, DungeonManager.instance.currentDungeon.currentEncounter.transform);
+            CleansingFlame r = Instantiate(GameObjectList.instance.orcHazard, DungeonManager.instance.currentDungeon.currentEncounter.transform);
             r.transform.position = FindTile.instance.TileClosestToMostTargets(DungeonManager.instance.currentDungeon.currentEncounter.tileList, DungeonManager.instance.currentDungeon.currentEncounter.player,test).transform.position;
+            r.sound = SoundList.instance.cleansingFlame;
             r.timer = timer;
             r.threshHold = threshhold.ToList();
             r.damage = damage;

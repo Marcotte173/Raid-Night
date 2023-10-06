@@ -9,7 +9,9 @@ public class MagicMissilesFire : Channel
     public float effectScale;
     public override void Projectile()
     {
+        SoundManager.instance.PlayEffect(SoundList.instance.explosiveMissiles[0]);
         Projectile p = Instantiate(GameObjectList.instance.playerProjectile, character.transform);
+        p.soundClip = SoundList.instance.explosiveMissiles[1];
         p.transform.position = character.transform.position;
         p.GetComponent<SpriteRenderer>().sprite = SpriteList.instance.arcaneAoeMissile;
         p.effectAnimator = GameObjectList.instance.explosion;

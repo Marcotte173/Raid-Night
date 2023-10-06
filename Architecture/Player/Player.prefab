@@ -154,12 +154,7 @@ MonoBehaviour:
   decisionTime: 0
   downTime: 0
   readTime: 0
-  hazardAware: 0
-  hazardAwareTimer: 0
-  aggroReact: 0
   aggroBelief: 0
-  aggroReactTimer: 0
-  aggroThreshold: 0
   beserkerSkill: 1
   mageSkill: 1
   rogueSkill: 1
@@ -168,10 +163,10 @@ MonoBehaviour:
   druidSkill: 1
   currentSkill: 0
   enchantmentShards: 0
-  task: {fileID: 0}
+  task: 0
+  timeOnTask: 0
   traits: []
   availableDays: 
-  availableToday: 0
   xp: 0
   ambition: 0
   guildLoyalty: 0

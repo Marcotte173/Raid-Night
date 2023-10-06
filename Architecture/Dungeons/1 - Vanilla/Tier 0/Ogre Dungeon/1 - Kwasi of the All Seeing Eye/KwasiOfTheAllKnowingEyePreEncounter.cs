@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class KwasiOfTheAllKnowingEyePreEncounter : PreEncounter
 {
-    
+    public override void StartThemeSong()
+    {
+
+    }
 }

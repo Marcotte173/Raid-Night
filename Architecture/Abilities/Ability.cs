@@ -35,7 +35,10 @@ public class Ability : MonoBehaviour
     public Sprite picTwo;
     public string flavorTwo;
 
-
+    private void Awake()
+    {
+        
+    }
 
     public virtual void UpdateStuff()
     {
@@ -98,7 +101,7 @@ public class Ability : MonoBehaviour
         }
     }
     public virtual void Cast()
-    {        
+    {
         character.action = verb;
         character.castTimer -= UnityEngine.Time.deltaTime;
         if (character.castTimer <= 0f)

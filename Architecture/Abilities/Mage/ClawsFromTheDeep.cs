@@ -10,6 +10,7 @@ public class ClawsFromTheDeep : AbilityHazard
     public override void TriggerHazard()
     {
         ClawsFromTheDeepHazard r = Instantiate(GameObjectList.instance.clawsFromTheDeep, DungeonManager.instance.currentDungeon.currentEncounter.transform);
+        r.sound = SoundList.instance.clawsFromTheDeep;
         r.transform.position = hazardPosition;
         r.timer = timer;
         r.threshHold = threshhold.ToList();

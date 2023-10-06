@@ -401,4 +401,8 @@ public class PreEncounter : MonoBehaviour
         EncounterUI.instance.choices[2].transform.position = EncounterUI.instance.buttonAnchor[2].transform.position;
         EncounterUI.instance.choices[3].transform.position = EncounterUI.instance.buttonAnchor[3].transform.position;
     }
+    public virtual void StartThemeSong()
+    {
+
+    }
 }

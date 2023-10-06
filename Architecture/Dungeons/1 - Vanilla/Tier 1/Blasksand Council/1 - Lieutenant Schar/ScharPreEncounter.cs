@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class ScharPreEncounter : PreEncounter
 {
-    
+    public override void StartThemeSong()
+    {
+
+    }
 }

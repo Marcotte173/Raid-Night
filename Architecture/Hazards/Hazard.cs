@@ -22,10 +22,12 @@ public class Hazard : MonoBehaviour
     public List<float> timeThreshHold = new List<float> { };
     public int timeCheck;
     public bool go;
+    public AudioClip sound;
 
     private void Start()
     {
         DungeonManager.instance.currentDungeon.currentEncounter.objects.Add(gameObject);
+        SoundManager.instance.PlayEffect(sound);
     }
     public void UpdateHazard()
     {

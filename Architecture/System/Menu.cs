@@ -127,6 +127,5 @@ public class Menu : MonoBehaviour
         Utility.instance.TurnOn(UIManager.instance.dungeons);
         Utility.instance.TurnOff(UIManager.instance.menu);
         Utility.instance.TurnOff(UIManager.instance.events);
-        Debug.Log("Off");
     }
 }

@@ -48,7 +48,7 @@ MonoBehaviour:
   target: {fileID: 0}
   abilityName: Magic Missile
   verb: Magic Missile
-  flavor: []
+  flavor: 
   rangeRequired: 5
   energyRequired: 25
   cooldownTime: 3
@@ -64,6 +64,12 @@ MonoBehaviour:
   noTarget: 0
   losRequired: 1
   pic: {fileID: 21300000, guid: c7a4ad4f101cf2842acf57e86ca1f75e, type: 3}
+  abilityNameTwo: 
+  picTwo: {fileID: 0}
+  flavorTwo: 
+  sound:
+  - {fileID: 8300000, guid: a40cbe9786c55954fbb9b3006d1f6021, type: 3}
+  - {fileID: 8300000, guid: 80a68f159587df848a326e4aa091fc05, type: 3}
   check: 0
   tick:
   - 0.9

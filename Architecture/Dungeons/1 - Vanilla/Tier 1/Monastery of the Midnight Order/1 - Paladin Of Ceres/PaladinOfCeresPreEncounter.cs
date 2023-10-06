@@ -20,4 +20,9 @@ public class PaladinOfCeresPreEncounter : PreEncounter
         TimeManagement.instance.MinuteAdd(20);
         Setup("Let's do this!");
     }
+    public override void StartThemeSong()
+    {
+        Debug.Log("Yo");
+        SoundManager.instance.PlayMusic(SoundList.instance.paladinofCeresEncounterTheme);
+    }
 }

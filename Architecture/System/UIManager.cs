@@ -39,6 +39,7 @@ public class UIManager : MonoBehaviour
 
     public void Menu()
     {
+        SoundManager.instance.PlayMusic(SoundList.instance.CurrentMenuTheme());
         Utility.instance.TurnOn(background.gameObject);
         Utility.instance.TurnOff(guild);
         Utility.instance.TurnOff(mainMenu);
@@ -58,7 +59,6 @@ public class UIManager : MonoBehaviour
         if (dungeons != null) Utility.instance.TurnOff(dungeons);
         Utility.instance.TurnOn(menu);
         Utility.instance.TurnOn(events);
-        Debug.Log("On");
         background.sprite = SpriteList.instance.menuBackGround;
         global::Menu.instance.UpdateButtons();
         Utility.instance.TurnOff(encounter);

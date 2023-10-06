@@ -11,8 +11,9 @@ public class ClawsFromTheDeepHazard : Hazard
     }
     public override void EffectEnd()
     {
+        SoundManager.instance.StopEffect(sound);
         DungeonManager.instance.currentDungeon.currentEncounter.objects.Remove(gameObject);
         DungeonManager.instance.currentDungeon.currentEncounter.playerHazards.Remove(this);
-        Destroy(gameObject);
+        Destroy(gameObject);        
     }
 }
