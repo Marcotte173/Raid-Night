@@ -85,9 +85,10 @@ MonoBehaviour:
   bossMinionSummons: []
   tileList: []
   occupied: []
-  arenaSizeX: 15
+  arenaSizeX: 20
   arenaSizeY: 15
-  cameraY: 5.5
+  cameraY: 7
+  cameraSize: 7.5
   dropAmount: 2
   possibleDrops:
   - {fileID: 11400000, guid: 9e6caff5181a755428ee353dc73e8d5b, type: 2}
@@ -98,12 +99,12 @@ MonoBehaviour:
   drops: []
   enemyHazards: []
   playerHazards: []
-  maximumYPlace: 7
+  pullRange: 4
   objects: []
   pullTime: 15
   bossFightTime: 20
   bossLocation:
-  - {x: 7, y: 8}
+  - {x: 15, y: 8}
   preEncounter: {fileID: 0}
   tank: {fileID: 0}
   offTank: {fileID: 0}
