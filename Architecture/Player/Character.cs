@@ -3,11 +3,6 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
-using static UnityEngine.EventSystems.EventTrigger;
-using UnityEngine.UIElements.Experimental;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.Networking.Types;
-
 public enum Species {Human, LizardFolk,Elf,Dwarf,Orc }
 public enum DecisionState { Downtime, Decision, Attack1, Attack2, Attack3, Attack4, Attack5, Attack6,StopDPS,StopMoving,Move,Wait,Asleep,Cast,DashCast,Adjust,Knockback,Reading}
 public class Character : MonoBehaviour
