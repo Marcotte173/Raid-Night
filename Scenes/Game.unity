@@ -19426,6 +19426,7 @@ MonoBehaviour:
   hemorage: {fileID: -5263384832310261847, guid: 242717226f452d64fb3df5577139f391, type: 3}
   bloodyMess: {fileID: 2581373920260691363, guid: b473a37b9a403454e9db5c4de5830a23, type: 3}
   outlineAnimator: {fileID: 2110666959712955281, guid: b9d8ab338c8bd6a4baaae27b7eeda4e6, type: 3}
+  regeneration: {fileID: 4059489655592792232, guid: d7bd0bee606947f4c8356ae22feda232, type: 3}
   disintigrate: {fileID: 9100000, guid: 9894c6ca3c9068945b5aef07c2f159d0, type: 2}
   explosion: {fileID: 9100000, guid: 6d164a1345a95c749bac0cc4ec3aab77, type: 2}
   fireball: {fileID: 9100000, guid: ced0c43a5cc22af4e8bd44eb21dfff33, type: 2}
@@ -19808,6 +19809,8 @@ MonoBehaviour:
   - {fileID: -2194270237197102360, guid: 33917603f17d0bc4382a16c5d40eef93, type: 3}
   - {fileID: 8884982572064976201, guid: 775169b24f2fc6941a191d5520df6da9, type: 3}
   kwasi: []
+  retha:
+  - {fileID: -3301940361138323280, guid: afdceb015e15428409b62cecde82cbc8, type: 3}
   boss: []
   schar:
   - {fileID: 1626312964777148864, guid: a17d7fe1cdcd27d438499325f76c7c07, type: 3}

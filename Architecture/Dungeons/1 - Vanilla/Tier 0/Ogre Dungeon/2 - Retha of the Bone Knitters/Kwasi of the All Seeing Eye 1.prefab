@@ -359,9 +359,9 @@ GameObject:
   - component: {fileID: 5929734053063115893}
   - component: {fileID: 182892751058502036}
   - component: {fileID: 5122901834028589347}
-  - component: {fileID: -1044823461134833247}
+  - component: {fileID: -1258115470330200919}
   m_Layer: 0
-  m_Name: Kwasi of the All Seeing Eye
+  m_Name: Kwasi of the All Seeing Eye 1
   m_TagString: Agent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,7 +434,7 @@ SpriteRenderer:
   m_SortingLayerID: 1647407313
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1169809225, guid: a4ec81e957c6fc64d90ff6aed9e9a300, type: 3}
+  m_Sprite: {fileID: 957222374, guid: a4ec81e957c6fc64d90ff6aed9e9a300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
   nameObject: {fileID: 1806665181958781592}
   characterNameText: {fileID: 894080678590979566}
   shield: {fileID: 578214168432514890}
---- !u!114 &-1044823461134833247
+--- !u!114 &-1258115470330200919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -526,7 +526,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7863001997379609896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95243d3d4681778408ffd980f7a9cee9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2697a4eacf2ab1b459ba895fcc842b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
@@ -543,10 +543,10 @@ MonoBehaviour:
   target: {fileID: 0}
   targetFromTaunt: {fileID: 0}
   orderTarget: {fileID: 0}
-  characterName: Kwasi
+  characterName: Retha
   resPriority: 0
   maxHealth:
-    baseValue: 3000
+    baseValue: 4000
   maxMana:
     baseValue: 0
   defence:
@@ -556,7 +556,7 @@ MonoBehaviour:
   spellpower:
     baseValue: 0
   damage:
-    baseValue: 50
+    baseValue: 40
   crit:
     baseValue: 5
   vamp:
@@ -571,20 +571,20 @@ MonoBehaviour:
     baseValue: 0
   manaRegenValue:
     baseValue: 0
-  health: 3000
+  health: 4000
   mana: 0
   physicalDamageMod:
-    baseValue: 1
+    baseValue: 0
   magicDamageMod:
-    baseValue: 1
+    baseValue: 0
   manaRegenMod:
-    baseValue: 1
+    baseValue: 0
   damageTakenMod:
-    baseValue: 1
+    baseValue: 0
   healingMod:
-    baseValue: 1
+    baseValue: 0
   energyCostMod:
-    baseValue: 1
+    baseValue: 0
   manaRegenTimer: 0
   untargetable: 0
   castTimer: 0
@@ -628,8 +628,8 @@ MonoBehaviour:
   aggro: []
   startX: 0
   startY: 0
-  attackSpeed: 2
-  flavor: This is an Ogre Poo
+  attackSpeed: 0
+  flavor: 
 --- !u!1 &8545720229702685778
 GameObject:
   m_ObjectHideFlags: 0

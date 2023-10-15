@@ -56,8 +56,11 @@ MonoBehaviour:
   - Something Something Something Ogres
   encounter:
   - {fileID: -5909260343461824014, guid: 96997c38b291cc64e9e5d344637677e4, type: 3}
+  - {fileID: -5909260343461824014, guid: e4f476a713399d448a051dbd5823c351, type: 3}
   encountersCompleted: 0
   currentEncounter: {fileID: 0}
+  expansion: 0
+  tier: 0
 --- !u!114 &7457044120249627379
 MonoBehaviour:
   m_ObjectHideFlags: 0

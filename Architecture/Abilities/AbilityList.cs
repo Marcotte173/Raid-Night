@@ -23,6 +23,7 @@ public class AbilityList : MonoBehaviour
     public List<Ability> mageExplosive;
     public List<Ability> mageFocused;
     public List<Ability> kwasi;
+    public List<Ability> retha;
     public List<Ability> boss;
     public List<Ability> schar;
     public List<Ability> arcanos;

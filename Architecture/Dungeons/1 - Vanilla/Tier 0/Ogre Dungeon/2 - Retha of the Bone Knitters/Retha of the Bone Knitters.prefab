@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8676550912881450861}
   - component: {fileID: 4014806047098220230}
   - component: {fileID: -5909260343461824014}
-  - component: {fileID: 4030174510317643846}
+  - component: {fileID: 8062068120382316754}
   m_Layer: 0
-  m_Name: Kwasi Of The All Knowing Eye Encounter
+  m_Name: Retha of the Bone Knitters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   fullOrderText: 
   orderCooldownTimer: 0
   orderTimer: 0
---- !u!114 &4030174510317643846
+--- !u!114 &8062068120382316754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,11 +121,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5159008379281963928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942b71698fec2964e97ff3f7de796d92, type: 3}
+  m_Script: {fileID: 11500000, guid: cf2f52251e3bc774ba5446b4926cdf3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankAtHome: {fileID: 0}
-  circumstance: 0
-  chosenCharacter: {fileID: 0}
-  end: 0
-  genericNumber: 0
