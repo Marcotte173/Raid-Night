@@ -56,6 +56,7 @@ public class GameObjectList : MonoBehaviour
     public BloodyMessBleed bloodyMess;
     public Animator outlineAnimator;
     public RegenerationHOT regeneration;
+    public BurnDot burn;
     public RuntimeAnimatorController disintigrate;
     public RuntimeAnimatorController explosion;
     public RuntimeAnimatorController fireball;

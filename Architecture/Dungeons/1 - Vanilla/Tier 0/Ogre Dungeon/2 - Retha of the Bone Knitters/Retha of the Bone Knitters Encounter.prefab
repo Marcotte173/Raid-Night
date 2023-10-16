@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5159008379281963928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8676550912881450861}
+  - component: {fileID: 4014806047098220230}
+  - component: {fileID: -5909260343461824014}
+  - component: {fileID: 8062068120382316754}
+  m_Layer: 0
+  m_Name: Retha of the Bone Knitters Encounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8676550912881450861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 837.4492, y: 617.4218, z: -165.00105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4014806047098220230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c032d6a9f4d6e418d41203f9f1bca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5909260343461824014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c080977e5f20649a193be2b57243a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  attempt: 0
+  bossSummon:
+  - {fileID: -1044823461134833247, guid: 228072eb32b1272428ee1dc826664b55, type: 3}
+  boss: []
+  player: []
+  playerMinionSummons: []
+  bossMinionSummons: []
+  tileList: []
+  occupied: []
+  arenaSizeX: 20
+  arenaSizeY: 15
+  cameraY: 7
+  cameraSize: 7.5
+  dropAmount: 2
+  possibleDrops:
+  - {fileID: 11400000, guid: 6be4c56d43740a5459b387bf72ddcb26, type: 2}
+  - {fileID: 11400000, guid: 9e6caff5181a755428ee353dc73e8d5b, type: 2}
+  - {fileID: 11400000, guid: a1de6a6c30017a14b8eedb865e731e4f, type: 2}
+  - {fileID: 11400000, guid: 0d7b5db11037b83498793d8f61961bd6, type: 2}
+  - {fileID: 11400000, guid: a77f055431de2cb48990a182d93ef33b, type: 2}
+  drops: []
+  enemyHazards: []
+  playerHazards: []
+  pullRange: 4
+  objects: []
+  pullTime: 15
+  bossFightTime: 20
+  bossLocation:
+  - {x: 15, y: 8}
+  preEncounter: {fileID: 0}
+  tank: {fileID: 0}
+  offTank: {fileID: 0}
+  healer: {fileID: 0}
+  offHealer: {fileID: 0}
+  characterMoveTiles: []
+  possibleFlagTiles: []
+  redFlagTiles: []
+  greenFlagTiles: []
+  blueFlagTiles: []
+  yellowFlagTiles: []
+  howManyFlags: 2
+  selected: 0
+  orders: 0
+  selectedTarget: {fileID: 0}
+  selectedCharacters: []
+  orderWaitLength: 5
+  targetOverrideLength: 15
+  orderTextLength: 2
+  selectText: 
+  orderText: 
+  fullOrderText: 
+  orderCooldownTimer: 0
+  orderTimer: 0
+--- !u!114 &8062068120382316754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159008379281963928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2f52251e3bc774ba5446b4926cdf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
