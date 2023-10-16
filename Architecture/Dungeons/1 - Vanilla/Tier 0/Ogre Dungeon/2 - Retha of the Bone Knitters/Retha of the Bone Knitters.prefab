@@ -574,17 +574,17 @@ MonoBehaviour:
   health: 4000
   mana: 0
   physicalDamageMod:
-    baseValue: 0
+    baseValue: 1
   magicDamageMod:
-    baseValue: 0
+    baseValue: 1
   manaRegenMod:
-    baseValue: 0
+    baseValue: 1
   damageTakenMod:
-    baseValue: 0
+    baseValue: 1
   healingMod:
-    baseValue: 0
+    baseValue: 1
   energyCostMod:
-    baseValue: 0
+    baseValue: 1
   manaRegenTimer: 0
   untargetable: 0
   castTimer: 0

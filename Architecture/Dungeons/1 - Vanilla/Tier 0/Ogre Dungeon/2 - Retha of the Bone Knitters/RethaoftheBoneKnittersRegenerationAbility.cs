@@ -8,7 +8,7 @@ public class RethaoftheBoneKnittersRegenerationAbility : Ability
     public List<float> threshHold;
     public override void Effect()
     {
-        SoothingMelodyHot h = Instantiate(GameObjectList.instance.soothingMelodyHot, target.transform);
+        RegenerationHOT h = Instantiate(GameObjectList.instance.regeneration, target.transform);
         h.attacker = character;
         h.damage = damage;
         h.threshHold = threshHold.ToList();

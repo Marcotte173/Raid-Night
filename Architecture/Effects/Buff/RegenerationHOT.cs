@@ -15,7 +15,7 @@ public class RegenerationHOT : Effect
     }
     public override void EffectTick()
     {
-        target.Heal(target.maxHealth.value *damage/100, true, attacker);
+        target.Heal(target.maxHealth.value *damage/100, false, attacker);
     }
     public override void EffectEnd()
     {

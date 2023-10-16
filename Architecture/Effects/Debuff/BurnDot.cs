@@ -15,7 +15,7 @@ public class BurnDot : Effect
     }
     public override void EffectTick()
     {
-        target.GetComponent<Boss>().TakeDamage(attacker, damage, Utility.instance.Threat(damage, threat), false, "");
+        target.TakeDamage(attacker, damage, Utility.instance.Threat(damage, threat), false, "");
     }
     public override void EffectEnd()
     {

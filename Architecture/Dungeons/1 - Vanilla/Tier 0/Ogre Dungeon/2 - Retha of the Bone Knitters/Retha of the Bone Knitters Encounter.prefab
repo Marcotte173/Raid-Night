@@ -61,7 +61,7 @@ MonoBehaviour:
   id: 0
   attempt: 0
   bossSummon:
-  - {fileID: -1044823461134833247, guid: 228072eb32b1272428ee1dc826664b55, type: 3}
+  - {fileID: -1258115470330200919, guid: 977064db7e8c3e3428adc7182da13b38, type: 3}
   boss: []
   player: []
   playerMinionSummons: []
@@ -124,3 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2f52251e3bc774ba5446b4926cdf3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tankAtHome: {fileID: 0}
+  circumstance: 0
+  chosenCharacter: {fileID: 0}
+  end: 0
+  genericNumber: 0

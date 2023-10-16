@@ -67,3 +67,9 @@ MonoBehaviour:
   abilityNameTwo: 
   picTwo: {fileID: 0}
   flavorTwo: 
+  threshhold:
+  - 4.5
+  - 2.5
+  - 0.5
+  - 0
+  dotTime: 6

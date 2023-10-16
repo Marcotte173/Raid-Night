@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class UltaniOfTheEmberTooth : Boss
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Equipment()
     {
-        
+        Equip.instance.Item(ItemList.instance.noItem, head);
+        Equip.instance.Item(ItemList.instance.noItem, chest);
+        Equip.instance.Item(ItemList.instance.noItem, legs);
+        Equip.instance.Item(ItemList.instance.noItem, feet);
+        Equip.instance.Item(ItemList.instance.noItem, trinket);
+        Equip.instance.Item(ItemList.instance.noItem, weapon);
+        Equip.instance.Item(ItemList.instance.noItem, offHand);
     }
-
-    // Update is called once per frame
-    void Update()
+    public override List<Ability> AbilityListReturn()
     {
-        
+        return AbilityList.instance.ultani;
+    }
+    public override void Decision()
+    {
+        if (ability[1].cooldownTimer <= 0)
+        {
+            state = DecisionState.Attack2;
+        }
+        else if (ability[0].cooldownTimer <= 0)
+        {
+            state = DecisionState.Attack1;
+        }
+    }
+    public override void AbilityPopulate()
+    {
+        AbilityLoad(AbilityListReturn());
+        ability[0].castTime = attackSpeed;
+        ability[0].damage = damage.value;
+    }
+    public override void CoreStats()
+    {
+        base.CoreStats();
     }
 }

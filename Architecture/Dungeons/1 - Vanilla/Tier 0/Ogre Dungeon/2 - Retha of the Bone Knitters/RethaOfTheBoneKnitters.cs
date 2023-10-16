@@ -20,7 +20,11 @@ public class RethaOfTheBoneKnitters : Boss
     }
     public override void Decision()
     {
-        if (ability[0].cooldownTimer <= 0)
+        if (ability[1].cooldownTimer <= 0)
+        {
+            state = DecisionState.Attack2;
+        }
+        else if (ability[0].cooldownTimer <= 0)
         {
             state = DecisionState.Attack1;
         }
