@@ -4682,7 +4682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &164130033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19814,13 +19814,10 @@ MonoBehaviour:
   - {fileID: -3301940361138323280, guid: afdceb015e15428409b62cecde82cbc8, type: 3}
   ultani:
   - {fileID: 6129201809149275711, guid: 10fabde38f0305c46968f7f167846442, type: 3}
-  boss: []
-  schar:
-  - {fileID: 1626312964777148864, guid: a17d7fe1cdcd27d438499325f76c7c07, type: 3}
-  arcanos:
-  - {fileID: 729704455714062196, guid: e5dcd34a5b05b9d4aace60b786c41474, type: 3}
-  boros:
-  - {fileID: -7189893580858109045, guid: eaf45d0404f87bc479a2c54e2a77a73b, type: 3}
+  ayodel:
+  - {fileID: 491419864551002206, guid: 4fc6b1162773b3a4a80e23534c1d630b, type: 3}
+  aminaris:
+  - {fileID: -8537638030228736280, guid: d46ef2013b85a1149a241bb76efdc327, type: 3}
   paladinOfCeres:
   - {fileID: -7785690199697923939, guid: 0f682f31d44d6a64d9f393a48d7d04bf, type: 3}
   paladinOfAkalos:
@@ -19831,6 +19828,8 @@ MonoBehaviour:
   paladinOfDurona:
   - {fileID: 1758495485342835181, guid: ee3702ff67c00a84fb1e28c3bb6941f1, type: 3}
   - {fileID: 9083920646243089858, guid: 39cf31d6f969fe844911d4533ce2b9ac, type: 3}
+  schar:
+  - {fileID: 1626312964777148864, guid: a17d7fe1cdcd27d438499325f76c7c07, type: 3}
 --- !u!1 &734111847
 GameObject:
   m_ObjectHideFlags: 0
@@ -51704,6 +51703,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869905725}
   m_CullTransparentMesh: 1
+--- !u!1 &1871372670
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871372672}
+  - component: {fileID: 1871372671}
+  m_Layer: 0
+  m_Name: OgreBosses_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1871372671
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871372670}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1001085302, guid: a4ec81e957c6fc64d90ff6aed9e9a300, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1871372672
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871372670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2066.228, y: 86.312195, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871772646
 GameObject:
   m_ObjectHideFlags: 0

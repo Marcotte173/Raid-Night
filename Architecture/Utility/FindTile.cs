@@ -90,7 +90,6 @@ public class FindTile : MonoBehaviour
                 distance = Vector2.Distance(destinationTile.transform.position, c.transform.position) + Vector2.Distance(originTile.transform.position, c.transform.position);
             }
         }
-        Debug.Log("Again");
         return closest;
     }
     public Tile FindClosestUnoccupiedTileAdjacentToTarget(Tile originTile, Tile destinationTile)

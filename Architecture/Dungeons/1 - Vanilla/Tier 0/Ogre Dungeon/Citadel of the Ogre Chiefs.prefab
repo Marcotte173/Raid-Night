@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: -5909260343461824014, guid: 96997c38b291cc64e9e5d344637677e4, type: 3}
   - {fileID: -5909260343461824014, guid: e4f476a713399d448a051dbd5823c351, type: 3}
   - {fileID: -5909260343461824014, guid: 3db24d8f768cafa428dbcf7eda0c9642, type: 3}
+  - {fileID: -5909260343461824014, guid: 31473560ab6a5ad4ea62069d006eabf3, type: 3}
   encountersCompleted: 0
   currentEncounter: {fileID: 0}
   expansion: 0

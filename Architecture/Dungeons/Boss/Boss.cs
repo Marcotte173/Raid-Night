@@ -14,7 +14,7 @@ public class Boss : Character
 
     public override void AbilityPopulate()
     {
-        AbilityLoad(AbilityList.instance.boss);        
+        
     }
     public override void Create()
     {

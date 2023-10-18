@@ -7,7 +7,6 @@ public class PaladinOfDuronaChargeAbility : Ability
     public override void Effect()
     {
         Character c = Target.instance.NoAggroRandom(character, DungeonManager.instance.currentDungeon.currentEncounter.player);
-        Debug.Log(c);
         character.target = target = character.dashCastTarget = c;
         cast = false;
         ProtectionDash();

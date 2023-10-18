@@ -325,7 +325,7 @@ public class Character : MonoBehaviour
         {
             if (!dash)
             {
-                action = $"Dashing towards {dashCastTarget.characterName}";
+                if(dashCastTarget !=null) action = $"Dashing towards {dashCastTarget.characterName}";
                 movement.AddModifier(new StatModifier(10, StatModType.Flat, this));
                 dash = true;
             }           
@@ -633,17 +633,14 @@ public class Character : MonoBehaviour
             if (DungeonManager.instance.currentDungeon.currentEncounter.Player().Count == 0 || DungeonManager.instance.currentDungeon.currentEncounter.Boss().Count == 0)
             {                
                 DungeonManager.instance.raidMode = RaidMode.Resolve;
-                string x = "";
                 foreach (GameObject g in DungeonManager.instance.currentDungeon.currentEncounter.objects.ToList())
                 {                    
                     if (g != null)
                     {
-                        x += $"{g.name},";
                         if (g.GetComponent<Effect>()) g.GetComponent<Effect>().EffectEnd();
                         else Destroy(g);
                     }
                 }
-                Debug.Log(x);
                 DungeonManager.instance.currentDungeon.currentEncounter.objects.Clear();
                 EncounterUI.instance.UpdateSmallUI();
                 EndMatch.instance.FindWinner();

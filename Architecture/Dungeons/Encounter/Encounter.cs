@@ -350,7 +350,6 @@ public class Encounter : MonoBehaviour
     internal void AddFlags()
     {
         List<Tile> noGo = FindTile.instance.TilesInRange(pullRange, FindTile.instance.Location(bossLocation[0]));
-        Debug.Log(noGo.Count);
         foreach(Tile t in tileList) if (t.id == 0&& !noGo.Contains(t)) characterMoveTiles.Add(t);
         foreach (Tile t in tileList) if (t.x > 0 && t.x < arenaSizeX - 1 && t.y > 0 && t.y < arenaSizeX - 1) if (t.id == 0) possibleFlagTiles.Add(t);
         for (int i = 0; i < howManyFlags; i++)
