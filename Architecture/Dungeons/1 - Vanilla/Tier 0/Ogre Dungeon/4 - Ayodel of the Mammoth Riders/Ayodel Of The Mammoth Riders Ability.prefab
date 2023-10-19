@@ -51,7 +51,7 @@ MonoBehaviour:
   flavor: Ayodel charges through his enemies
   rangeRequired: 99
   energyRequired: 0
-  cooldownTime: 10
+  cooldownTime: 6
   cooldownTimer: 0
   damage: 50
   threat: 0

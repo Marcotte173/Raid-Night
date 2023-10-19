@@ -27,19 +27,6 @@ public class Move : MonoBehaviour
         foreach(Character a in DungeonManager.instance.currentDungeon.currentEncounter.Characters()) if (a != character && a != character.target) newList.Add(a);
         return newList;
     }
-    public bool GonnaCollide()
-    {
-        foreach (Character a in DungeonManager.instance.currentDungeon.currentEncounter.Characters())
-        {
-            Move aMove = a.move;
-            if (aMove!=this)
-            {                
-                if (aMove.isMoving && nextTile == aMove.nextTile) return true;
-                if(nextTile = aMove.currentTile) return true;
-            }
-        }
-        return false;
-    }
     public void CurrentTile()
     {
         currentTile = FindTile.instance.Location(new Vector2(Mathf.Round(transform.position.x), (Mathf.Round(transform.position.y))));

@@ -39,9 +39,10 @@ public class EncounterManager : MonoBehaviour
     public void UpdateAgents()
     {
         //All Bosses act
+        foreach(Character a in currentEncounter.Characters()) a.move.UpdateMove();
         foreach (Character a in currentEncounter.BossAndMinion())
-        {
-            a.move.UpdateMove();
+        {           
+            CheckOccupied(a);
             //Update Character Info
             a.UpdateStuff();
             //Act
@@ -51,19 +52,42 @@ public class EncounterManager : MonoBehaviour
         //All Players Act
         foreach (Character a in currentEncounter.PlayerAndMinion())
         {
-            a.move.UpdateMove();
+            CheckOccupied(a);
             //Update Character Info
             a.UpdateStuff();
             //Act
             a.State();
             foreach (Ability ab in a.ability) ab.UpdateStuff();
         }
-        //Make minions act
-        //if (currentEncounter.PlayerMinion().Count > 0) foreach (Character a in currentEncounter.PlayerMinion()) a.GetComponentInChildren<Class>().State();
-        //if (currentEncounter.BossMinion().Count > 0) foreach (Character a in currentEncounter.BossMinion()) a.GetComponent<Minion>().State();
     }
-   
-    
+
+    private void CheckOccupied(Character a)
+    {
+        
+        foreach (Character agent in currentEncounter.Characters()) 
+        {
+            if (a != agent)
+            {
+                if(a.move.currentTile == agent.move.currentTile&& !agent.move.isMoving&& !a.move.isMoving)
+                {
+                    Debug.Log(a.move.currentTile.name);
+                    a.state = DecisionState.Move;
+                    if (a.target == null)
+                    {
+                        if (GetComponent<Boss>())
+                        {
+                            Boss b = GetComponent<Boss>();
+                            b.GetTarget();
+                        }
+                        else a.GetTarget();
+                    }
+                    a.moveTile = FindTile.instance.FindClosestUnoccupiedTile(a.move.currentTile, a.target.move.currentTile) ;
+                    Debug.Log(a.moveTile);
+                }
+            }               
+        }
+    }
+
     public void Combat()
     {
         DungeonManager.instance.raidMode = RaidMode.Setup;

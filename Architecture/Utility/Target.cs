@@ -16,13 +16,13 @@ public class Target : MonoBehaviour
     {
         Character target = list[0];
         //Calculate Distance to target
-        float distance = Vector3.Distance(a.transform.position, target.transform.position);
+        float distance = FindTile.instance.Distance(a.transform.position, target.transform.position);
         //Check each other in the list
         foreach (Character c in list)
         {
             if (c.untargetable) continue;
             //If the distance to them is shorter
-            if (Vector3.Distance(a.transform.position, c.transform.position) < Vector3.Distance(a.transform.position, target.transform.position)) target = c;
+            if (FindTile.instance.Distance(a.transform.position, c.transform.position) < FindTile.instance.Distance(a.transform.position, target.transform.position)) target = c;
         }
         return target;
     }
@@ -34,7 +34,7 @@ public class Target : MonoBehaviour
         {      
             if (c.untargetable) continue;
             //If the distance to them is shorter
-            if (Vector2.Distance(a.transform.position, c.transform.position) > Vector2.Distance(a.transform.position, target.transform.position)) target = c;
+            if (FindTile.instance.Distance(a.transform.position, c.transform.position) > FindTile.instance.Distance(a.transform.position, target.transform.position)) target = c;
         }
         return target;
     }

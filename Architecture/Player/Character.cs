@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Species {Human, LizardFolk,Elf,Dwarf,Orc }
-public enum DecisionState { Downtime, Decision, Attack1, Attack2, Attack3, Attack4, Attack5, Attack6,StopDPS,StopMoving,Move,Wait,Asleep,Cast,DashCast,Adjust,Knockback,Reading}
+public enum DecisionState { Downtime, Decision, Attack1, Attack2, Attack3, Attack4, Attack5, Attack6,StopDPS,StopMoving,Move,Wait,Asleep,Cast,DashCast,Knockback,Reading}
 public class Character : MonoBehaviour
 {
     public int id;
@@ -226,22 +226,6 @@ public class Character : MonoBehaviour
         else
         {
             if (state == DecisionState.Asleep) { }
-            else if (ShareTile())
-            {
-                this.move.nextTile = null;
-                this.move.nextTile = FindTile.instance.FindUnoccupiedTileAdjacentToTarget(this.move.currentTile);
-                if (this.move.nextTile != null) state = DecisionState.Adjust;
-                else
-                {
-                    waitTimer = 3;
-                    state = DecisionState.Wait;
-                }
-            }
-            else if (state == DecisionState.Adjust)
-            {
-                if (MoveManager.instance.IsAtTile(this.move, this.move.nextTile)) state = DecisionState.Decision;
-                else MoveManager.instance.Move(this.move);
-            }
             else if (state == DecisionState.Wait) Wait();
             else if (state == DecisionState.StopDPS) StopDPS();
             else if (target != null && target.ko)
@@ -265,7 +249,7 @@ public class Character : MonoBehaviour
                 else
                 {
                     if (knockbackAmount > 0)
-                    {                        
+                    {
                         Knockback();
                     }
                     else
@@ -275,10 +259,8 @@ public class Character : MonoBehaviour
                         state = DecisionState.Downtime;
                         knockBackDestination = null;
                     }
-                }                
+                }
             }
-            //else if (!GetComponent<Summon>() && GetComponent<Player>() && player.AggroHigh()) player.AggroInterupt();
-            //else if (!GetComponent<Summon>() && GetComponent<Player>() && hazards.Count > 0) player.HazardInterupt();            
             else if (state == DecisionState.Downtime)
             {
                 action = $"Downtime";
@@ -298,12 +280,11 @@ public class Character : MonoBehaviour
                     action = $"Reading";
                     readTimer -= Time.deltaTime;
                     if (readTimer <= 0)
-                    {                        
+                    {
                         readTimer = readTime;
                         state = DecisionState.Decision;
                     }
                 }
-
             }
             else if (state == DecisionState.Decision)
             {
@@ -312,7 +293,7 @@ public class Character : MonoBehaviour
                     action = $"Thinking";
                     decisionTimer -= Time.deltaTime;
                     if (decisionTimer <= 0)
-                    {                        
+                    {
                         decisionTimer = decisionTime;
                         GetTarget();
                         Decision();
@@ -691,7 +672,7 @@ public class Character : MonoBehaviour
     public List<Character> InRange(Character c, float range,List<Character> list)
     {
         List<Character> newList = new List<Character> { };
-        foreach (Character a in list) if (Vector2.Distance(c.transform.position, a.transform.position) <= range) newList.Add(a);
+        foreach (Character a in list) if (FindTile.instance.Distance(c.transform.position, a.transform.position) <= range) newList.Add(a);
         return newList;
     }
     public Character FindAdjacentEnemy(List<Tile> tiles, List<Character> list)
@@ -744,7 +725,7 @@ public class Character : MonoBehaviour
         foreach (Tile c in list)
         {
             //If the distance to them is shorter
-            if (Vector3.Distance(transform.position, c.transform.position) < Vector3.Distance(transform.position, target.transform.position)) target = c;
+            if (FindTile.instance.Distance(transform.position, c.transform.position) < FindTile.instance.Distance(transform.position, target.transform.position)) target = c;
         }
         return target;        
     }

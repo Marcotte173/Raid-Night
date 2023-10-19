@@ -49,7 +49,7 @@ public class Rebirth : Heal
 
     public void Use2()
     {
-        rangeToTarget = Vector3.Distance(character.transform.position, target.transform.position);
+        rangeToTarget = FindTile.instance.Distance(character.transform.position, target.transform.position);
         if (InRange(rangeRequired))
         {
             character.actionCast = character.castTimer = character.CastTimer(castTime);

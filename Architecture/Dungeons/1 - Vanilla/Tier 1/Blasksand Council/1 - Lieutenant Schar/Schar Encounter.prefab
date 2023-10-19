@@ -74,11 +74,9 @@ MonoBehaviour:
   cameraSize: 7.5
   dropAmount: 2
   possibleDrops:
-  - {fileID: 11400000, guid: 6be4c56d43740a5459b387bf72ddcb26, type: 2}
-  - {fileID: 11400000, guid: 9e6caff5181a755428ee353dc73e8d5b, type: 2}
-  - {fileID: 11400000, guid: a1de6a6c30017a14b8eedb865e731e4f, type: 2}
-  - {fileID: 11400000, guid: 0d7b5db11037b83498793d8f61961bd6, type: 2}
-  - {fileID: 11400000, guid: a77f055431de2cb48990a182d93ef33b, type: 2}
+  - {fileID: 11400000, guid: b07884e26d86e12419076214223d87b8, type: 2}
+  - {fileID: 11400000, guid: 7ac4af1a74aaad849a229f95ec54da21, type: 2}
+  - {fileID: 11400000, guid: 6ac7af78dbcf2774a8f5a3a05b48d0ae, type: 2}
   drops: []
   enemyHazards: []
   playerHazards: []

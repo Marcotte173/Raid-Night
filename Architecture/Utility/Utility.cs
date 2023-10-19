@@ -142,10 +142,13 @@ public class Utility : MonoBehaviour
         
     public void DamageNumber(Character a,string message, Color32 color)
     {
-        DamageNumbers dn = Instantiate(GameObjectList.instance.damageNumbers, a.transform);        
-        dn.transform.position = new Vector2(a.transform.position.x + Random.Range(-.6f, .61f), a.transform.position.y + 1);
-        dn.message = message;
-        dn.displayNumber.color = color;
+        if(a!= null && !a.ko)
+        {
+            DamageNumbers dn = Instantiate(GameObjectList.instance.damageNumbers, a.transform);
+            dn.transform.position = new Vector2(a.transform.position.x + Random.Range(-.6f, .61f), a.transform.position.y + 1);
+            dn.message = message;
+            dn.displayNumber.color = color;
+        }        
     }
     public void Aggro(Boss b, Character attacker,float aggroNumber)
     {

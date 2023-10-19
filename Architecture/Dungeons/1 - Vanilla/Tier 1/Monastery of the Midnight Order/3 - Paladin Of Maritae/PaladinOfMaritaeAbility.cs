@@ -33,7 +33,7 @@ public class PaladinOfMaritaeAbility : Ability
     public override void ComputerUse()
     {
         character.action = $"Moving";
-        rangeToTarget = Vector3.Distance(character.transform.position, target.transform.position);
+        rangeToTarget = FindTile.instance.Distance(character.transform.position, target.transform.position);
         if (InRange(rangeRequired))
         {            
             character.actionCast = character.castTimer = character.CastTimer(castTime);

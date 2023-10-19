@@ -12,7 +12,7 @@ public class LastStand : Ability
     {
         foreach (Character a in DungeonManager.instance.currentDungeon.currentEncounter.PlayerAndMinion())
         {
-            if (Vector2.Distance(a.transform.position, character.transform.position) <= buffRange)
+            if (FindTile.instance.Distance(a.transform.position, character.transform.position) <= buffRange)
             {
                 LastStandBuff r = Instantiate(GameObjectList.instance.lastStand, a.transform);
                 r.attacker = character;

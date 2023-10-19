@@ -146,6 +146,7 @@ public class UserControl : MonoBehaviour
         else
         {
             if (Input.GetKeyUp(KeyCode.K)) DungeonManager.instance.currentDungeon.currentEncounter.boss[0].TakeDamage(DungeonManager.instance.currentDungeon.currentEncounter.player[0],3000,true,"poop");
+            if (Input.GetKeyDown(KeyCode.T)) foreach (Character c in DungeonManager.instance.currentDungeon.currentEncounter.Player()) if(c != DungeonManager.instance.currentDungeon.currentEncounter.Player()[0])c.health = 30;
             // Toggle User Control
             //***********
             //USER CONTROL REMOVED FROM TEST

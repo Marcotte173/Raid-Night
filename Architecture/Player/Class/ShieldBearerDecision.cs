@@ -156,7 +156,7 @@ public class ShieldBearerDecision : MonoBehaviour
         LastStand l = (LastStand)shieldBearer.ability[4];
         foreach (Character a in DungeonManager.instance.currentDungeon.currentEncounter.PlayerAndMinion())
         {
-            if (a.health <= a.maxHealth.value * l.threshHoldToUse && Vector2.Distance(a.transform.position, transform.position) <=l.buffRange) return true;
+            if (a.health <= a.maxHealth.value * l.threshHoldToUse && FindTile.instance.Distance(a.transform.position, transform.position) <=l.buffRange) return true;
         }
         return false;
     }

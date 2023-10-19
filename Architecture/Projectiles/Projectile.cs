@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
         {
             transform.right = target.transform.position - transform.position;
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * UnityEngine.Time.deltaTime);
-            if (Vector2.Distance(transform.position, target.transform.position) < 0.3f)
+            if (FindTile.instance.Distance(transform.position, target.transform.position) < 0.3f)
             {
                 SoundManager.instance.PlayEffect(soundClip);
                 ProjectileEffect();

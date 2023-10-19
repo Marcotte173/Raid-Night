@@ -11,7 +11,7 @@ public class ProjectileEnemy : Projectile
         {
             List<Character> targets = new List<Character> { };
             foreach (Character a in DungeonManager.instance.currentDungeon.currentEncounter.Characters()) if (a.GetComponent<Class>() && a != target) targets.Add(a);
-            if (targets.Count > 0) foreach (Character a in targets) if (Vector2.Distance(a.transform.position, target.transform.position) < range) a.GetComponent<Class>().TakeDamage(attacker, damage, false, "");
+            if (targets.Count > 0) foreach (Character a in targets) if (FindTile.instance.Distance(a.transform.position, target.transform.position) < range) a.GetComponent<Class>().TakeDamage(attacker, damage, false, "");
         }
         if (effectAnimator != null)
         {

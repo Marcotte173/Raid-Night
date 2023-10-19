@@ -20,7 +20,7 @@ public class Channel : Ability
             target = UserControl.instance.controlledCharacter.target;
             if (ValidTarget())
             {
-                rangeToTarget = Vector3.Distance(character.transform.position, target.transform.position);
+                rangeToTarget = FindTile.instance.Distance(character.transform.position, target.transform.position);
                 if (InRange(rangeRequired))
                 {
                     character.action = verb;
@@ -45,7 +45,7 @@ public class Channel : Ability
     }
     public override void ComputerUse()
     {
-        rangeToTarget = Vector3.Distance(character.transform.position, target.transform.position);
+        rangeToTarget = FindTile.instance.Distance(character.transform.position, target.transform.position);
         if (InRange(rangeRequired))
         {
             character.action = verb;

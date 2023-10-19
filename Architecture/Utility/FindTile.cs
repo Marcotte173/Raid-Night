@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FindTile : MonoBehaviour
 {
@@ -17,14 +18,14 @@ public class FindTile : MonoBehaviour
         foreach (Tile t in tileList)
         {
             int x = 0;
-            foreach (Character p in player) if (Vector3.Distance(t.transform.position, p.transform.position) <= distance) x++;
+            foreach (Character p in player) if (Distance(t.transform.position, p.transform.position) <= distance) x++;
             if (x == 3) three.Add(t);
             else if (x == 2) two.Add(t);
             else if (x == 1) one.Add(t);
         }
-        if (three.Count > 0) return three[Random.Range(0, three.Count)];
-        if (two.Count > 0) return two[Random.Range(0, two.Count)];
-        if (one.Count > 0) return one[Random.Range(0, one.Count)];
+        if (three.Count > 0) return three[UnityEngine.Random.Range(0, three.Count)];
+        if (two.Count > 0) return two[UnityEngine.Random.Range(0, two.Count)];
+        if (one.Count > 0) return one[UnityEngine.Random.Range(0, one.Count)];
         return null;
     }
     internal int MostTilesInRange(List<Tile> tileList, List<Character> player, float distance)
@@ -35,7 +36,7 @@ public class FindTile : MonoBehaviour
         foreach (Tile t in tileList)
         {
             int x = 0;
-            foreach (Character p in player) if (Vector3.Distance(t.transform.position, p.transform.position) <= distance) x++;
+            foreach (Character p in player) if (Distance(t.transform.position, p.transform.position) <= distance) x++;
             if (x == 3) three.Add(t);
             else if (x == 2) two.Add(t);
             else if (x == 1) one.Add(t);
@@ -78,18 +79,47 @@ public class FindTile : MonoBehaviour
         if (exclusions != null) if (exclusions.Count > 0) foreach (Tile t in exclusions) if (tileList.Contains(t)) tileList.Remove(t);
         Tile closest = tileList[0];
         //Calculate Distance to target
-        float distance = Vector2.Distance(destinationTile.transform.position, closest.transform.position) + Vector2.Distance(originTile.transform.position, closest.transform.position);
+        float distance = Distance(destinationTile.transform.position, closest.transform.position) + Distance(originTile.transform.position, closest.transform.position);
         //Check each other in the list
         foreach (Tile c in tileList)
         {
             //If the distance to them is shorter
-            if (Vector2.Distance(destinationTile.transform.position, c.transform.position) + Vector2.Distance(originTile.transform.position, c.transform.position) < distance)
+            if (Distance(destinationTile.transform.position, c.transform.position) +Distance(originTile.transform.position, c.transform.position) < distance)
             {
                 //They are the target, new distance
                 closest = c;
-                distance = Vector2.Distance(destinationTile.transform.position, c.transform.position) + Vector2.Distance(originTile.transform.position, c.transform.position);
+                distance = Distance(destinationTile.transform.position, c.transform.position) +Distance(originTile.transform.position, c.transform.position);
             }
         }
+        return closest;
+    }
+    public Tile FindClosestUnoccupiedTile(Tile originTile)
+    {
+        foreach(Tile t in originTile.neighbor)
+        {
+            if (t.OccupiedBy() == null) return t;
+        }
+        return null;
+    }
+    public Tile FindClosestUnoccupiedTile(Tile originTile,Tile targetTile)
+    {
+        List<Tile> options = new List<Tile>();
+        foreach (Tile t in originTile.neighbor) if (t.OccupiedBy() == null) options.Add(t);
+        Tile closest = options[0];
+        
+        float distance = Distance(options[0], targetTile);
+        if (options.Count > 1)
+        {
+            for (int i = 0; i < options.Count; i++)
+            {
+                Debug.Log($"{options[i].name} - {targetTile.name}: {Distance(options[i], targetTile) }");
+                if (Distance(options[i], targetTile) < distance)
+                {
+                    distance = Distance(options[i], targetTile);
+                    closest = options[i];
+                }
+            }
+        }        
         return closest;
     }
     public Tile FindClosestUnoccupiedTileAdjacentToTarget(Tile originTile, Tile destinationTile)
@@ -255,5 +285,21 @@ public class FindTile : MonoBehaviour
         if (n.x == t.x + 1 && (n.y == t.y + 1 || n.y == t.y - 1)) return false;
         if (n.x == t.x - 1 && (n.y == t.y + 1 || n.y == t.y - 1)) return false;
         return true;
+    }
+    public float Distance(float x1, float x2, float y1, float y2)
+    {
+        float x = Math.Abs(x1 - x2);
+        float y = Math.Abs(y1 - y2);
+        x *= x;
+        y *= y;
+        return (float)Math.Sqrt(x + y);
+    }
+    public float Distance(Tile tile, Tile tile2)
+    {
+        return Distance(tile.x, tile2.x, tile.y, tile2.y);
+    }
+    public float Distance(Vector2 tile, Vector2 tile2)
+    {
+        return Distance(tile.x, tile2.x, tile.y, tile2.y);
     }
 }

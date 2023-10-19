@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
     public CreateAgent freeAgent;
     public bool test;
 
-
     private void Start()
     {
         instance = this;

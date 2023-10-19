@@ -72,13 +72,19 @@ MonoBehaviour:
   arenaSizeY: 15
   cameraY: 7
   cameraSize: 7.5
-  dropAmount: 2
+  dropAmount: 3
   possibleDrops:
   - {fileID: 11400000, guid: e6ec32a10a853aa438d51994671340c5, type: 2}
   - {fileID: 11400000, guid: a33753d4afc8d084aa7b2f0bc1a3ed2e, type: 2}
   - {fileID: 11400000, guid: e39912230fedfe34484a7a71b28ede55, type: 2}
   - {fileID: 11400000, guid: 06c45796be3faa04ca139e0e1e0f0f96, type: 2}
   - {fileID: 11400000, guid: 54e31db49dc88914f85398b6ca362449, type: 2}
+  - {fileID: 11400000, guid: e6ec32a10a853aa438d51994671340c5, type: 2}
+  - {fileID: 11400000, guid: a33753d4afc8d084aa7b2f0bc1a3ed2e, type: 2}
+  - {fileID: 11400000, guid: e39912230fedfe34484a7a71b28ede55, type: 2}
+  - {fileID: 11400000, guid: 06c45796be3faa04ca139e0e1e0f0f96, type: 2}
+  - {fileID: 11400000, guid: 54e31db49dc88914f85398b6ca362449, type: 2}
+  - {fileID: 11400000, guid: 7e0ccd500499d484fafb47a302e3e6a8, type: 2}
   drops: []
   enemyHazards: []
   playerHazards: []
@@ -124,3 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57ea6d6fbc41994084bb0ea2dcc8727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tankAtHome: {fileID: 0}
+  circumstance: 0
+  chosenCharacter: {fileID: 0}
+  end: 0
+  genericNumber: 0
